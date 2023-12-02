@@ -5,9 +5,11 @@ const ContentList = () => {
 
   return (
     <div>
-        {data.map((items) => (
-        <Content {...items} key={items.id}/>
-      ))}
+        <div className="row">
+            {data.map((items) => (
+                    <Content {...items} key={items.id}/>
+            ))}
+        </div>
     </div>
   )
 }
