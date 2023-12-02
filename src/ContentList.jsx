@@ -8,7 +8,7 @@ const ContentList = () => {
         <div className="row">
             {data.map((items) => (
                     <Content {...items} key={items.id}/>
-            ))}
+              ))}
         </div>
     </div>
   )
