@@ -1,14 +1,15 @@
 import ContentList from "./ContentList"
 import Sidebar from "./Sidebar"
 
-const MainContent = () => {
+// eslint-disable-next-line react/prop-types
+const MainContent = ({language}) => {
   return (
       <div className="container-fluid p-0 row">
         <div className="col-xxl-2 container-lg-3">
-          <Sidebar/>
+          <Sidebar language={language}/>
         </div>
         <div className="col-xxl-10 container-lg-9">
-          <ContentList/>
+          <ContentList language={language}/>
         </div>
       </div>
   )

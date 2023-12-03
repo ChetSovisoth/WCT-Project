@@ -1,6 +1,5 @@
-import { useState } from "react"
-function Navbar() {
-    const [language, setLanguage] = useState('English');
+// eslint-disable-next-line react/prop-types
+function Navbar({ language, onLanguageChange }) {
   return (
     <>
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -18,10 +17,13 @@ function Navbar() {
                             <a className="nav-link" href="#">About</a>
                         </li>
                         <li className="nav-item mx-2">
-                            <a className="nav-link" href="#">Contact Us</a>
+                            <a className="nav-link" href="#footer">Contact Us</a>
+                        </li>
+                        <li className="nav-item mx-2">
+                            <a className="nav-link" href="#">Bookmarks</a>
                         </li>
                         <li className="nav-link mx-2">
-                            <button type="button" className="btn btn-outline-secondary" id="current-language" onClick={() => setLanguage(language === 'English' ? 'Khmer' : 'English')}>
+                            <button type="button" className="btn btn-outline-secondary" id="current-language" onClick={() => onLanguageChange(language === 'English' ? 'Khmer' : 'English')}>
                                 <i className="bi bi-globe2 me-2"></i>
                                 <span id="language-text">{language}</span>
                             </button>

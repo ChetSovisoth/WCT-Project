@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div className='container-fluid bg-light m-0 p-0'>
+    <div id="footer" className='container-fluid bg-light m-0 p-0'>
         <div className='row g-0 text-center'>
             <div className='col-md-4 '>
                 <p className="lead mt-3">Location</p>

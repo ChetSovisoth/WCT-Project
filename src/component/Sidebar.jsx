@@ -1,5 +1,6 @@
 import api from "../assets/api"
-const Sidebar = () => {
+// eslint-disable-next-line react/prop-types
+const Sidebar = ({ language }) => {
   return (
      
     <div className="mt-2 ms-2">
@@ -15,14 +16,14 @@ const Sidebar = () => {
         className="shadow bg-body-tertiary rounded mt-2 ms-2"
       ></iframe>
 
-      <p className="p-3 fs-3 mb-2 lead fw-bold">{api.English.city}</p>
+      <p className="p-3 fs-3 mb-2 lead fw-bold">{api[language].city}</p>
       <div className="card mb-3 bg-light border-0 " style={{width: "18rem"}}>
         <div className="card-body">
-          <h5 className="card-title">{api.English.intro}</h5>
+          <h5 className="card-title">{api[language].intro}</h5>
           <div className="rounded bg-white shadow bg-body-tertiary my-4">
-            <p className="card-text p-3">{api.English.description}</p>
+            <p className="card-text p-3">{api[language].description}</p>
           </div>
-          <img className="img-fluid rounded mb-3" src={api.English.cityPicture} alt="Picture of City" />
+          <img className="img-fluid rounded mb-3" src={api[language].cityPicture} alt="Picture of City" />
         </div>
       </div>
       <div className="container p-3">
