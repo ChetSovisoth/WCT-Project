@@ -1,6 +1,8 @@
 {
     "English": {
         "city": "Phnom Penh",
+        "restaurant": "https://www.tripadvisor.com/Restaurants-g293940-Phnom_Penh.html",
+        "accomadation": "https://www.booking.com/city/kh/phnom-penh.html",
         "intro": "Capital of Cambodia",
         "description": "Phnom Penh, Cambodia’s busy capital, sits at the junction of the Mekong and Tonlé Sap rivers. It was a hub for both the Khmer Empire and French colonialists.",
         "cityPicture": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e4/ce/b1/20171006-093816-01-largejpg.jpg?w=700&h=500&s=1",
@@ -65,6 +67,8 @@
     },
     "Khmer": {
         "city": "ភ្នំពេញ",
+        "restaurant": "https://www.tripadvisor.com/Restaurants-g293940-Phnom_Penh.html",
+        "accomadation": "https://www.booking.com/city/kh/phnom-penh.html",
         "intro": "រាជធានីនៃប្រទេសកម្ពុជា",
         "description": "ភ្នំពេញ ជារាជធានីដ៏មមាញឹករបស់ប្រទេសកម្ពុជា ស្ថិតនៅចំណុចប្រសព្វនៃទន្លេមេគង្គ និងទន្លេសាប។ វាជាមជ្ឈមណ្ឌលសម្រាប់ទាំងអាណាចក្រខ្មែរ និងអាណានិគមនិយមបារាំង។",
         "cityPicture": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e4/ce/b1/20171006-093816-01-largejpg.jpg?w=700&h=500&s=1",
@@ -80,7 +84,7 @@
                 "id": 2,
                 "attractionPlace": "វត្តភ្នំ",
                 "imgSrc": "https://image-tc.galaxy.tf/wijpeg-6lp8rr31vfvdy41ubtpqdgihd/wat-phnom-pagoda.jpg",
-                "tag": "Pagoda · Historic Sites",
+                "tag": "វត្ត · ទីតាំងប្រវត្តិសាស្ត្រ",
                 "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
             },
             {

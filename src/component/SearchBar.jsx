@@ -1,7 +1,7 @@
 import pic from '../pic/Search Page.jpg'
 import pic2 from '../pic/Angkor.jpg'
 
-function SearchBar() {
+const SearchBar = () => {
   return (
     <>
       <div className="container-fluid p-0 ">

@@ -1,5 +1,11 @@
-// eslint-disable-next-line react/prop-types
-function Navbar({ language, onLanguageChange }) {
+import PropTypes from 'prop-types';
+
+const Navbar = ({ language, onLanguageChange }) => {
+    Navbar.propTypes = {
+        language: PropTypes.string.isRequired,
+        onLanguageChange: PropTypes.string.isRequired,
+      };
+    
   return (
     <>
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
