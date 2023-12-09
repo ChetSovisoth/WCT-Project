@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <div id="footer" className='container-fluid bg-light m-0 p-0'>
-        <div className='row g-0 text-center'>
+    <div id="footer" className='container-fluid bg-footer m-0 p-0'>
+        <div className='row g-0 text-center text-white'>
             <div className='col-md-4 '>
                 <p className="lead mt-3">Location</p>
                 <p className='m-0'>Sras Chak, Duan Penh</p>
@@ -15,9 +15,7 @@ const Footer = () => {
             </div>
             <div className='col-md-4 mt-3'>
                 <p className="lead">Social Media</p>
-                <a href="https://www.facebook.com/sovisoth.chet/">
-                    <i className="bi bi-facebook mx-3 fs-2"></i>
-                </a>
+                <i className="bi bi-facebook mx-3 fs-2"></i>
                 <i className="bi bi-instagram mx-3 fs-2"></i>
                 <i className="bi bi-twitter-x mx-3 fs-2"></i>
                 <i className="bi bi-github mx-3 fs-2"></i>         

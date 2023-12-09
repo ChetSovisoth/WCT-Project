@@ -1,13 +1,8 @@
 import PropTypes from 'prop-types';
 
-const Navbar = ({ language, onLanguageChange }) => {
-    Navbar.propTypes = {
-        language: PropTypes.string.isRequired,
-        onLanguageChange: PropTypes.string.isRequired,
-      };
-    
-  return (
-    <>
+const Navbar = ({ language, onLanguageChange }) => { 
+    return (
+        <>
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div className="container-fluid">
                 <a className="navbar-brand mx-5" href="#"><strong>KomsanHub</strong></a>
@@ -44,5 +39,9 @@ const Navbar = ({ language, onLanguageChange }) => {
     </>
   )
 }
+Navbar.propTypes = {
+    language: PropTypes.string.isRequired,
+    onLanguageChange: PropTypes.func.isRequired,
+};
 
 export default Navbar

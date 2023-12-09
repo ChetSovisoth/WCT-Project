@@ -1,0 +1,22 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 635px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxxl: 2050px, // Add your custom breakpoint
+  xxxl: 1700px
+);
+
+@import '../../../node_modules/bootstrap/scss/_functions';
+@import '../../../node_modules/bootstrap/scss/_variables';
+
+$custom-theme-color: (
+    "footer": #101D29
+);
+
+$theme-colors: map-merge($custom-theme-color, $theme-colors);
+
+
+@import '../../../node_modules/bootstrap/scss/bootstrap';
