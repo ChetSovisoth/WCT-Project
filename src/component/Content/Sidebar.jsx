@@ -1,5 +1,5 @@
 import { useState } from "react";
-import api from "../assets/api"
+import api from "../../assets/api"
 import PropTypes from 'prop-types';
 const Sidebar = ({ language }) => {
   const[displaySidebar, setDisplaySidebar] = useState(false);

@@ -109,11 +109,11 @@ const Content = (props) => {
               <div className="btn-group rounded mt-1">
                 <a href={map} className="btn btn-outline-primary rounded-start" target="_blank" rel="noopener noreferrer">Map</a>
                 <a className="btn btn-outline-primary rounded-end" data-bs-toggle="modal" data-bs-target="#rate-modal">Rate</a>
-                  <div className="modal fade" id="rate-modal" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div className="modal fade" id="rate-modal" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="rateModal" aria-hidden="true">
                     <div className="modal-dialog modal-dialog-centered">
                       <div className="modal-content">
                         <div className="modal-header">
-                          <h1 className="modal-title fs-5" id="staticBackdropLabel">Rate</h1>
+                          <h1 className="modal-title fs-5" id="rateModal">Rate</h1>
                           <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">

@@ -5,8 +5,8 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1400px,
-  xxxxl: 2050px, // Add your custom breakpoint
-  xxxl: 1700px
+  xxxl: 1700px,
+  xxxxl: 2050px // Add your custom breakpoint
 );
 
 @import '../../../node_modules/bootstrap/scss/_functions';

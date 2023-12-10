@@ -1,8 +1,8 @@
-import Navbar from './component/Navbar.jsx'
-import SearchBar from './component/SearchBar.jsx';
-import MainContent from './component/MainContent.jsx';
-import Footer from './component/Footer.jsx';
-//import Bookmark from './component/Bookmark.jsx';
+import Navbar from './component/General/Navbar.jsx'
+import SearchBar from './component/General/SearchBar.jsx';
+import MainContent from './component/Content/MainContent.jsx';
+import Footer from './component/General/Footer.jsx';
+//import Bookmark from './component/Bookmark/Bookmark.jsx';
 import { useState } from 'react';
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
       <Navbar language={language} onLanguageChange={handleLanguageChange}/>
       <SearchBar />
       <MainContent language={language}/>
+      {/* <Bookmark language={language}/> */}
       <Footer />
     </>
   );

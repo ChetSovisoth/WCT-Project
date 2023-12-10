@@ -1,5 +1,5 @@
-import pic from '../pic/Search Page.jpg'
-import pic2 from '../pic/Angkor.jpg'
+import pic from './../../assets/pic/Search Page.jpg'
+import pic2 from './../../assets/pic/Angkor.jpg'
 
 const SearchBar = () => {
   return (
