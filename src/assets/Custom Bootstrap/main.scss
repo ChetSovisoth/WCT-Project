@@ -1,7 +1,7 @@
 $grid-breakpoints: (
   xs: 0,
   sm: 635px,
-  md: 768px,
+  md: 815px,
   lg: 992px,
   xl: 1200px,
   xxl: 1400px,
@@ -13,7 +13,7 @@ $grid-breakpoints: (
 @import '../../../node_modules/bootstrap/scss/_variables';
 
 $custom-theme-color: (
-    "footer": #101D29
+  "footer": #101D29
 );
 
 $theme-colors: map-merge($custom-theme-color, $theme-colors);

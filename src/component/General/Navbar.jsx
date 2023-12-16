@@ -23,8 +23,16 @@ const Navbar = ({ language, onLanguageChange }) => {
                         <li className="nav-item mx-2">
                             <a className="nav-link" href="#">Bookmarks</a>
                         </li>
-                        <li className="nav-link mx-2">
+                        {/* big screen */}
+                        <li className="nav-link mx-2 d-none d-lg-inline">
                             <button type="button" className="btn btn-outline-secondary" id="current-language" onClick={() => onLanguageChange(language === 'English' ? 'Khmer' : 'English')}>
+                                <i className="bi bi-globe2 me-2"></i>
+                                <span id="language-text">{language}</span>
+                            </button>
+                        </li>
+                        {/* small screen */}
+                        <li className="nav-link mx-2 d-lg-none">
+                            <button type="button" className="btn border-0 text-secondary" id="current-language" onClick={() => onLanguageChange(language === 'English' ? 'Khmer' : 'English')}>
                                 <i className="bi bi-globe2 me-2"></i>
                                 <span id="language-text">{language}</span>
                             </button>
@@ -41,7 +49,7 @@ const Navbar = ({ language, onLanguageChange }) => {
 }
 Navbar.propTypes = {
     language: PropTypes.string.isRequired,
-    onLanguageChange: PropTypes.func.isRequired,
+    onLanguageChange: PropTypes.func.isRequired
 };
 
 export default Navbar

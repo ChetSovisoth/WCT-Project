@@ -8,9 +8,9 @@ const Footer = () => {
             </div>
             <div className="col-4">
                 <h3 className="py-3 fw-bold">Explore</h3>
-                <p className="m-0">Home</p>
-                <p className="m-0">About Us</p>
-                <p className="m-0">Bookmark</p>
+                <p className="m-0"><a href="#" className="text-decoration-none text-white">Home</a></p>
+                <p className="m-0"><a href="#" className="text-decoration-none text-white">About Us</a></p>
+                <p className="m-0"><a href="#" className="text-decoration-none text-white">Bookmark</a></p>
             </div>
             <div className="col-4">
                 <h3 className="py-3 ms-3">Follow Us</h3>
