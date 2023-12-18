@@ -1,19 +1,31 @@
-const Sidebar = () => {
+import DisplaySidebar from './DisplaySidebar'
+import PropTypes from 'prop-types';
+
+const Sidebar = ({ language }) => {
   return (
     <>
-        <button className="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Toggle offcanvas</button>
-        <div className="alert alert-info d-none d-lg-block">Resize your browser to show the responsive offcanvas toggle.</div>
+      {/*  Offcanvas shows when screensize below sm  */}
+      <div className='d-flex justify-content-center d-sm-none'>
+        <button className="btn btn-lg btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Display City Informations</button>
         <div className="offcanvas-lg offcanvas-end" tabIndex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
-        <div className="offcanvas-header">
-            <h5 className="offcanvas-title" id="offcanvasResponsiveLabel">Responsive offcanvas</h5>
+          <div className="offcanvas-header">
             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+          </div>
+          <div className="offcanvas-body">
+            <DisplaySidebar language={language}/>
+          </div>
         </div>
-        <div className="offcanvas-body">
-            <p className="mb-0">This is content within an <code>.offcanvas-lg</code>.</p>
-        </div>
-        </div>
+      </div>
+      {/* Shows above md */}
+      <div className='d-none d-sm-inline'>
+        <DisplaySidebar language={language}/>
+      </div>
+
     </>
   )
 }
+Sidebar.propTypes = {
+  language: PropTypes.string.isRequired,
+};
 
 export default Sidebar
