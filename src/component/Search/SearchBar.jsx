@@ -28,7 +28,7 @@ const SearchBar = ({ setResults }) => {
   };
   return (
     <>
-      <div className="container-fluid bg-light p-0 d-none d-md-inline">
+      <div className="container-fluid bg-light p-0 d-none d-lg-inline">
         <div className="d-flex justify-content-center align-items-center bg-img-lg">
           <div className='p-3 d-flex align-items-center bg-white rounded' style={{marginTop: "150px"}}>
             <i className="bi bi-search fs-5"></i>
@@ -43,7 +43,7 @@ const SearchBar = ({ setResults }) => {
           </div>
         </div>
       </div>
-      <div className="container-fluid bg-light p-0 d-md-none">
+      <div className="container-fluid bg-light p-0 d-lg-none">
         <div className="d-flex justify-content-center align-items-center bg-img">
           <div className='bg-white p-3 rounded d-flex align-items-center' style={{marginTop: "150px"}}>
             <i className="bi bi-search fs-5"></i>
