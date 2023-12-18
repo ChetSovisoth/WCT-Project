@@ -23,7 +23,7 @@ const Footer = () => {
             <div className="pt-3 text-white">
                 <h3>Contact Us</h3>
                 <p>Email: customer_support@komsanhub.com</p>
-                <p>Tel: +855 23 123 456</p>
+                <p>Tel: +855 96 311 8521</p>
             </div>
             <hr className="border-2"/>
             <p className="text-center">Copyright &#64; KomsanHub 2023</p>

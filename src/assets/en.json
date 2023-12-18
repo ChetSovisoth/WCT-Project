@@ -1,0 +1,155 @@
+
+{
+    "phnomPenh": {
+        "province": "Phnom Penh",
+        "city": "Phnom Penh",
+        "restaurant": "https://www.tripadvisor.com/Restaurants-g293940-Phnom_Penh.html",
+        "accomadation": "https://www.booking.com/city/kh/phnom-penh.html",
+        "intro": "Capital of Cambodia",
+        "description": "Phnom Penh, Cambodia’s busy capital, sits at the junction of the Mekong and Tonlé Sap rivers. It was a hub for both the Khmer Empire and French colonialists.",
+        "cityPicture": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e4/ce/b1/20171006-093816-01-largejpg.jpg?w=700&h=500&s=1",
+        "attraction": [
+            {
+                "id": 1,
+                "attractionPlace": "Royal Palace",
+                "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Le_Palais_Royal_%28Phnom_Penh%29_%286997773481%29.jpg",
+                "tag": "Historic Sites",
+                "map": "https://maps.app.goo.gl/yfXZ6qGJrLKo4DyH6",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            },
+            {
+                "id": 2,
+                "attractionPlace": "Wat Phnom",
+                "imgSrc": "https://image-tc.galaxy.tf/wijpeg-6lp8rr31vfvdy41ubtpqdgihd/wat-phnom-pagoda.jpg",
+                "tag": "Pagoda · Historic Sites",
+                "map": "https://maps.app.goo.gl/Lh9HtZTrCFxUzNfx7",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            },
+            {
+                "id": 3,
+                "attractionPlace": "Central Market",
+                "imgSrc": "https://a.cdn-hotels.com/gdcs/production177/d321/27a9e4c5-6c41-4906-a59c-c4617a97385f.jpg",
+                "tag": "Landmarks · Architectural Buildings",
+                "map": "https://maps.app.goo.gl/swJV9ZrsvzMmEzcg6",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            },
+            {
+                "id": 4,
+                "attractionPlace": "National Museum",
+                "imgSrc": "https://a.cdn-hotels.com/gdcs/production32/d1605/a7794c8c-840f-480d-847c-da8dfb9d33f7.jpg",
+                "tag": "Specialty Museums",
+                "map": "https://maps.app.goo.gl/weydaowpsH669bjk6",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            },
+            {
+                "id": 5,
+                "attractionPlace": "Tuol Sleng Genocide Museum",
+                "imgSrc": "https://i0.wp.com/www.actoftraveling.com/wp-content/uploads/2019/05/DSC04933.jpg?ssl=1",
+                "tag": "History Museums",
+                "map": "https://maps.app.goo.gl/r3gypr739vvZDn7K6",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            },
+            {
+                "id": 6,
+                "attractionPlace": "Independence Monument",
+                "imgSrc": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/02-Independence_Monument_Phnom_Penh-nX-6.jpg/1920px-02-Independence_Monument_Phnom_Penh-nX-6.jpg",
+                "tag": "History Museums",
+                "map": "https://maps.app.goo.gl/tkxJRqhCJ1ShPMcb6",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            },
+            {
+                "id": 7,
+                "attractionPlace": "Choeung Ek Genocidal Center",
+                "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Buddhist_Stupa_at_Choeung_Ek_killing_fields%2C_Cambodia.JPG/330px-Buddhist_Stupa_at_Choeung_Ek_killing_fields%2C_Cambodia.JPG",
+                "tag": "Historic Sites",
+                "map": "https://maps.app.goo.gl/QMRnfhypoES53aLa9",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            },
+            {
+                "id": 8,
+                "attractionPlace": "Riverside Park",
+                "imgSrc": "https://media.istockphoto.com/id/1476073967/photo/busy-and-coolest-time-of-day-along-phnom-penh-riverside-cambodia-south-east-asia.jpg?s=612x612&w=0&k=20&c=apNOS1ODttEEGSZiD_yT9SsYYBuJ_sgS7Kilfs_orOY=",
+                "tag": "Bodies of Water",
+                "map": "https://maps.app.goo.gl/Qs1cGP3eH9wXJckH7",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            }
+        ]
+        
+    },
+    "banteayMeanchey": {
+        "province": "Phnom Penh",
+        "city": "Serei Saophoan",
+        "restaurant": "https://www.tripadvisor.com/Restaurants-g293940-Phnom_Penh.html",
+        "accomadation": "https://www.booking.com/city/kh/phnom-penh.html",
+        "intro": "Capital of Cambodia",
+        "description": "Phnom Penh, Cambodia’s busy capital, sits at the junction of the Mekong and Tonlé Sap rivers. It was a hub for both the Khmer Empire and French colonialists.",
+        "cityPicture": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e4/ce/b1/20171006-093816-01-largejpg.jpg?w=700&h=500&s=1",
+        "attraction": [
+            {
+                "id": 1,
+                "attractionPlace": "Royal Palace",
+                "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Le_Palais_Royal_%28Phnom_Penh%29_%286997773481%29.jpg",
+                "tag": "Historic Sites",
+                "map": "https://maps.app.goo.gl/yfXZ6qGJrLKo4DyH6",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            },
+            {
+                "id": 2,
+                "attractionPlace": "Wat Phnom",
+                "imgSrc": "https://image-tc.galaxy.tf/wijpeg-6lp8rr31vfvdy41ubtpqdgihd/wat-phnom-pagoda.jpg",
+                "tag": "Pagoda · Historic Sites",
+                "map": "https://maps.app.goo.gl/Lh9HtZTrCFxUzNfx7",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            },
+            {
+                "id": 3,
+                "attractionPlace": "Central Market",
+                "imgSrc": "https://a.cdn-hotels.com/gdcs/production177/d321/27a9e4c5-6c41-4906-a59c-c4617a97385f.jpg",
+                "tag": "Landmarks · Architectural Buildings",
+                "map": "https://maps.app.goo.gl/swJV9ZrsvzMmEzcg6",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            },
+            {
+                "id": 4,
+                "attractionPlace": "National Museum",
+                "imgSrc": "https://a.cdn-hotels.com/gdcs/production32/d1605/a7794c8c-840f-480d-847c-da8dfb9d33f7.jpg",
+                "tag": "Specialty Museums",
+                "map": "https://maps.app.goo.gl/weydaowpsH669bjk6",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            },
+            {
+                "id": 5,
+                "attractionPlace": "Tuol Sleng Genocide Museum",
+                "imgSrc": "https://i0.wp.com/www.actoftraveling.com/wp-content/uploads/2019/05/DSC04933.jpg?ssl=1",
+                "tag": "History Museums",
+                "map": "https://maps.app.goo.gl/r3gypr739vvZDn7K6",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            },
+            {
+                "id": 6,
+                "attractionPlace": "Independence Monument",
+                "imgSrc": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/02-Independence_Monument_Phnom_Penh-nX-6.jpg/1920px-02-Independence_Monument_Phnom_Penh-nX-6.jpg",
+                "tag": "History Museums",
+                "map": "https://maps.app.goo.gl/tkxJRqhCJ1ShPMcb6",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            },
+            {
+                "id": 7,
+                "attractionPlace": "Choeung Ek Genocidal Center",
+                "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Buddhist_Stupa_at_Choeung_Ek_killing_fields%2C_Cambodia.JPG/330px-Buddhist_Stupa_at_Choeung_Ek_killing_fields%2C_Cambodia.JPG",
+                "tag": "Historic Sites",
+                "map": "https://maps.app.goo.gl/QMRnfhypoES53aLa9",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            },
+            {
+                "id": 8,
+                "attractionPlace": "Riverside Park",
+                "imgSrc": "https://media.istockphoto.com/id/1476073967/photo/busy-and-coolest-time-of-day-along-phnom-penh-riverside-cambodia-south-east-asia.jpg?s=612x612&w=0&k=20&c=apNOS1ODttEEGSZiD_yT9SsYYBuJ_sgS7Kilfs_orOY=",
+                "tag": "Bodies of Water",
+                "map": "https://maps.app.goo.gl/Qs1cGP3eH9wXJckH7",
+                "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, dicta consequatur animi dolor iure in!"
+            }
+        ]
+    }        
+}
+
