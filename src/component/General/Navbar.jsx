@@ -1,27 +1,27 @@
 import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom';
 const Navbar = ({ language, onLanguageChange }) => { 
     return (
         <>
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div className="container-fluid">
-                <a className="navbar-brand mx-5" href="#"><strong>KomsanHub</strong></a>
+                <a className="navbar-brand mx-5"><strong><Link to='/' className="nav-link">KomsanHub</Link></strong></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse mx-4" id="navbarNavDropdown">
                     <ul className="navbar-nav flex-grow-1 justify-content-end align-items-center">
                         <li className="nav-item mx-2">
-                            <a className="nav-link" aria-current="page" href="#">Home</a>
+                            <Link to='/' className="nav-link">Home</Link>
                         </li>
                         <li className="nav-item mx-2">
-                            <a className="nav-link" href="#">About</a>
+                            <Link to='/about' className="nav-link">About Us</Link>
                         </li>
                         <li className="nav-item mx-2">
-                            <a className="nav-link" href="#footer">Contact Us</a>
+                            <Link to='/contact' className="nav-link">Contact Us</Link>
                         </li>
                         <li className="nav-item mx-2">
-                            <a className="nav-link" href="#">Bookmarks</a>
+                            <Link to='/bookmark' className="nav-link">Bookmarks</Link>
                         </li>
                         {/* big screen */}
                         <li className="nav-link mx-2 d-none d-lg-inline">
@@ -38,7 +38,7 @@ const Navbar = ({ language, onLanguageChange }) => {
                             </button>
                         </li>
                         <li className="nav-link  mx-2">
-                            <a className="nav-link" href="#">Sign In</a>
+                            <Link to='/signin' className="nav-link">Sign In</Link>
                         </li>
                     </ul>
                 </div>
