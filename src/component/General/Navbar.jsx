@@ -5,7 +5,7 @@ const Navbar = ({ language, onLanguageChange }) => {
         <>
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div className="container-fluid">
-                <a className="navbar-brand mx-5"><strong><Link to='/' className="nav-link">KomsanHub</Link></strong></a>
+                <Link className="navbar-brand mx-5 fw-bold fs-3" to='/'>KomsanHub</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

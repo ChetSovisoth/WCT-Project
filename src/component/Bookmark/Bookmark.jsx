@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-//import api from './../../assets/api.json'
 const Bookmark = ({ onBookmarkClick, isBookmarked }) => {
   return (
     <button

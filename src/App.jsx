@@ -25,10 +25,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="/bookmark" element={<Bookmark language={language}/>} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<Contact language={language}/>} />
         <Route path="/signin" element={<MainContent language={language}/>} />
       </Routes>
-      <Footer />
+      <Footer language={language}/>
     </>
   );
 }

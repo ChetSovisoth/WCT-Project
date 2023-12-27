@@ -2,15 +2,14 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Rating from '../Rate/Rating';
 import Rated from '../Rate/Rated';
-import Bookmark from '../Bookmark/Bookmark';
 
 const Content = (props) => {
+  const {attractionPlace, imgSrc, tag, description, map, id} = props;
   const [isBookmarked, setBookmarked] = useState(false);
   const [rating, setRating] = useState(0);
-  const {attractionPlace, imgSrc, tag, description, map, id} = props;
   
   const handleBookmarkClick = () => {
-    setBookmarked(!isBookmarked);
+    setBookmarked(!isBookmarked);    
   };
   const handleRatingChange = (ratingValue) => {
     setRating(ratingValue)
@@ -20,7 +19,13 @@ const Content = (props) => {
       <div className='col-12 col-md-6 col-xl-4 col-xxxl-3 d-flex justify-content-center g-2 mb-5'>
         <div className="card pb-0 mx-auto position-relative" style={{ minWidth: "230px", maxWidth: "350px" }}>
           <img src={imgSrc} className="card-img-top" alt={attractionPlace} style={{ width: "100%", height: "190px" }} />
-          <Bookmark onBookmarkClick={handleBookmarkClick} isBookmarked={isBookmarked} />
+          <button
+            className={`btn position-absolute top-0 end-0 bg-white rounded-5 ${isBookmarked ? 'text-danger' : ''}`}
+            style={{ fontSize: "1.5rem" }}
+            onClick={handleBookmarkClick}
+          >
+          <i className={`bi bi-heart${isBookmarked ? '-fill' : ''}`}></i>
+          </button>
           <div className="card-body">
             <h5 className="card-title">{attractionPlace}</h5>
             <small className="text-body-secondary">{tag}</small>
