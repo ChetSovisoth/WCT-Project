@@ -8,7 +8,7 @@ const Contact = ({ language }) => {
           <p className="lead">{language === 'English' ? "Let us Know": "អនុញ្ញាតឱ្យយើងដឹង"}</p>
           <div className="d-flex flex-column align-items-center">
             <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" type="text" id="name" placeholder="Your Name" style={{padding: "8px"}}/>
-            <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" type="text" id="number" placeholder="Phone Number" style={{padding: "8px"}}/>
+            <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" type="tel" inputMode="numeric" id="number" placeholder="Phone Number" style={{padding: "8px"}}/>
             <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" type="text" id="location" placeholder="Location Name" style={{padding: "8px"}}/>
             <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" type="text" id="locationMap" placeholder="Google Map Location" style={{padding: "8px"}}/>
             <button className="btn btn-outline-primary ms-5 mt-1 w-25" >Submit</button>
@@ -31,7 +31,7 @@ const Contact = ({ language }) => {
             <div className="d-flex justify-content-center">
               <a href="https://www.facebook.com/komsanhub/" target="_blank" rel="noopener noreferrer"><i className="bi bi-facebook mx-3 fs-2 text-primary"></i></a>
               <a href="https://t.me/VisothChet" target="_blank" rel="noopener noreferrer"><i className="bi bi-telegram mx-3 fs-2 text-black"></i></a>
-              <a href="https://www.instagram.com/cs.soth/" target="_blank" rel="noopener noreferrer"><i className="bi bi-instagram mx-3 fs-2" style={{color: "#bc2a8d"}}></i></a>         
+              <a href="https://www.instagram.com/komsanhub/" target="_blank" rel="noopener noreferrer"><i className="bi bi-instagram mx-3 fs-2" style={{color: "#bc2a8d"}}></i></a>         
               <a href="https://github.com/ChetSovisoth" target="_blank" rel="noopener noreferrer"><i className="bi bi-github mx-3 fs-2 text-black"></i></a>
             </div>
         </div>
