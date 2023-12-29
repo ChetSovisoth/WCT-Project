@@ -7,9 +7,9 @@ const ContentList = ({ language }) => {
   return (
     <>
       <div className="row">
-          {attractions.map((items) => (
-            <Content {...items} key={items.id}/>
-            ))}
+        {attractions.map((items) => (
+          <Content {...items} key={items.id}/>
+          ))}
       </div>
     </>
   )

@@ -1,14 +1,14 @@
-import SearchBar from './component/Search/SearchBar.jsx';
-import MainContent from './component/Content/MainContent.jsx';
 import { Route, Routes } from 'react-router-dom';
-import SearchResultsList from "./component/Search/SearchResultList.jsx";
 import { useState } from 'react';
-import Bookmark from './component/Bookmark/BookmarkContent.jsx';
 import Footer from './component/General/Footer.jsx';
 import About from './component/General/About.jsx';
 import Home from './component/General/Home.jsx';
-import Navbar from './component/General/Navbar.jsx'
+import Navbar from './component/General/Navbar.jsx';
 import Contact from './component/General/Contact.jsx';
+import SearchBar from './component/Search/SearchBar.jsx';
+import SearchResultsList from "./component/Search/SearchResultList.jsx";
+import MainContent from './component/Content/MainContent.jsx';
+import Bookmark from './component/Bookmark/BookmarkList.jsx';
 
 function App() {
   const [results, setResults] = useState([]);

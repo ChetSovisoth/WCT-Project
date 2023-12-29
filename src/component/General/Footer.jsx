@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 const Footer = ({ language }) => {
   return (
     <div id="footer" className="bg-footer mb-0">
-        <div className="row text-white mx-2 mb-3">
+        <div className="row text-white mx-2">
             <div className="col-md-4">
                 <h3 className="py-3 fw-bold">KomsanHub</h3>
                 <p style={{maxWidth: "500px"}}>{language === 'English' ? "Royal University of Phnom Penh (Campus 1), Russian Federation Blvd (110), Touk Kork, Phnom Penh, Cambodia": "សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ (សាខាទី១), មហាវិថីសហព័ន្ធរុស្ស៊ី (១១០), ទួលគោក, រាជធានីភ្នំពេញ, កម្ពុជា"}</p>

@@ -1,18 +1,24 @@
-import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Rating from '../Rate/Rating';
 import Rated from '../Rate/Rated';
+import api from "../../assets/api"
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleBookmark, setRating } from '../../Redux/slice';
 
 const Content = (props) => {
   const {attractionPlace, imgSrc, tag, description, map, id} = props;
-  const [isBookmarked, setBookmarked] = useState(false);
-  const [rating, setRating] = useState(0);
-  
+  const dispatch = useDispatch();
+  const isBookmarked = useSelector((state) => state.bookmarks[id]?.isBookmarked || false);
+  const rating = useSelector((state) => state.bookmarks[id]?.rating || 0);
+
   const handleBookmarkClick = () => {
-    setBookmarked(!isBookmarked);    
+    const English = api.English.phnomPenh[id - 1];
+    const Khmer = api.Khmer.phnomPenh[id - 1];
+    dispatch(toggleBookmark({English, Khmer, id}));
   };
+
   const handleRatingChange = (ratingValue) => {
-    setRating(ratingValue)
+    dispatch(setRating({ id, ratingValue }));
   };
   return (
     <>
@@ -32,7 +38,7 @@ const Content = (props) => {
             <p className="card-text overflow-y-auto" style={{ height: "100px" }}>{description}</p>
             <div className='d-flex align-items-center'>
               <div className='jusifty-content-start flex-grow-1'>
-                  <Rated rating={rating}/>
+                <Rated rating={rating} contentId={id}/>
               </div>
               <div className="btn-group rounded mt-1">
                 <a href={map} className="btn btn-outline-primary rounded-start" target="_blank" rel="noopener noreferrer">Map</a>
