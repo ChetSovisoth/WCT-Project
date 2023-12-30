@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 
 const Rated = ({ rating }) => {
   const rated = rating;
-  console.log(rated)
   return (
     <>   
       {Array.from({ length: 5 }, (_, index) => (

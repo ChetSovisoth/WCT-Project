@@ -3,10 +3,10 @@ import Rating from '../Rate/Rating';
 import Rated from '../Rate/Rated';
 import api from "../../assets/api"
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleBookmark, setRating } from '../../Redux/slice';
+import { toggleBookmark, setRating } from '../../redux/slice';
 
 const Content = (props) => {
-  const {attractionPlace, imgSrc, tag, description, map, id} = props;
+  const {attractionPlace, imgSrc, tag, description, map, id } = props;
   const dispatch = useDispatch();
   const isBookmarked = useSelector((state) => state.bookmarks[id]?.isBookmarked || false);
   const rating = useSelector((state) => state.bookmarks[id]?.rating || 0);
@@ -50,7 +50,7 @@ const Content = (props) => {
       </div>
 
       <div className="modal fade" id={`rate-modal-${id}`} data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="rateModal" aria-hidden="true">
-        <Rating contentId={id} onRatingChange={handleRatingChange}/>
+        <Rating contentId={id} onRatingChange={handleRatingChange} />
       </div>
     </>
   )

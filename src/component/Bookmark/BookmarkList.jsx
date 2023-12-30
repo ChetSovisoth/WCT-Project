@@ -1,8 +1,10 @@
-import PropTypes from 'prop-types';
 import { useEffect, useState } from "react";
 import Content from '../Content/Content';
+import { useContext } from 'react';
+import { LanguageContext } from '../../App';
 
-const BookmarkList = ({ language }) => {
+const BookmarkList = () => {
+  const language = useContext(LanguageContext);
   const [bookmarkedItems, setBookmarkedItems] = useState([]);
   useEffect(() =>  {
       const items = [];
@@ -29,7 +31,5 @@ const BookmarkList = ({ language }) => {
     </>
   )
 }
-BookmarkList.propTypes = {
-  language: PropTypes.string.isRequired,
-}
+
 export default BookmarkList

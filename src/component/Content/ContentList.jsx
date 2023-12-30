@@ -1,8 +1,10 @@
 import Content from "./Content"
 import api from "../../assets/api"
-import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import { LanguageContext } from '../../App';
 
-const ContentList = ({ language }) => {
+const ContentList = () => {
+  const language = useContext(LanguageContext);
   const attractions = api[language].phnomPenh;
   return (
     <>
@@ -14,9 +16,5 @@ const ContentList = ({ language }) => {
     </>
   )
 }
-//Props-types validations
-ContentList.propTypes = {
-  language: PropTypes.string.isRequired,
-};
 
 export default ContentList

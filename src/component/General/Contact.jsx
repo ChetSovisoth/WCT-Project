@@ -1,5 +1,7 @@
-import PropTypes from "prop-types"
-const Contact = ({ language }) => {
+import { useContext } from 'react';
+import { LanguageContext } from '../../App';
+const Contact = () => {
+    const language = useContext(LanguageContext);
   return (
     <>
       <div className="d-flex my-5 row">
@@ -38,8 +40,5 @@ const Contact = ({ language }) => {
       </div>
     </>
   )
-}
-Contact.propTypes = {
-  language: PropTypes.string.isRequired
 }
 export default Contact

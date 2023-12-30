@@ -1,7 +1,6 @@
 import Sidebar from './Sidebar'
-import PropTypes from 'prop-types';
 
-const DisplaySidebar = ({ language }) => {
+const DisplaySidebar = () => {
   return (
     <>
       {/*  Offcanvas shows when screensize below sm  */}
@@ -12,20 +11,17 @@ const DisplaySidebar = ({ language }) => {
             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
           </div>
           <div className="offcanvas-body">
-            <Sidebar language={language}/>
+            <Sidebar />
           </div>
         </div>
       </div>
       {/* Shows above md */}
       <div className='d-none d-sm-inline'>
-        <Sidebar language={language}/>
+        <Sidebar />
       </div>
 
     </>
   )
 }
-DisplaySidebar.propTypes = {
-  language: PropTypes.string.isRequired,
-};
 
 export default DisplaySidebar

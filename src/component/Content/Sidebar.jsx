@@ -1,6 +1,8 @@
 import api from "../../assets/api"
-import PropTypes from 'prop-types';
-const Sidebar = ({ language }) => {
+import { useContext } from 'react';
+import { LanguageContext } from '../../App';
+const Sidebar = () => {
+  const language = useContext(LanguageContext);
   return (
     <div className="ms-3 mt-2 sticky-top">
       <div className="d-flex flex-column align-items-center">
@@ -32,8 +34,4 @@ const Sidebar = ({ language }) => {
     </div>
   )
 }
-Sidebar.propTypes = {
-  language: PropTypes.string.isRequired,
-};
-
 export default Sidebar

@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import PropTypes from "prop-types"
-
-const Footer = ({ language }) => {
+import { useContext } from 'react';
+import { LanguageContext } from '../../App';
+const Footer = () => {
+    const language = useContext(LanguageContext);
   return (
     <div id="footer" className="bg-footer mb-0">
         <div className="row text-white mx-2">
@@ -29,12 +30,9 @@ const Footer = ({ language }) => {
                 <p className="mb-1 lead">{language === 'English' ? "Tel": "ទូរស័ព្ទ"}: +855 96 311 8521</p>
             </div>
             <hr className="border-2 mx-2"/>
-            <p className="text-center">Copyright &#64; KomsanHub 2023</p>
+            <p className="text-center">Copyright &#64; KomsanHub {new Date().getFullYear()}</p>
         </div>
     </div>
   )
-}
-Footer.propTypes = {
-    language: PropTypes.string.isRequired
 }
 export default Footer

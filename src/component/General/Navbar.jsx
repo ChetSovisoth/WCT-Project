@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-const Navbar = ({ language, onLanguageChange }) => { 
+import { useContext } from 'react';
+import { LanguageContext } from '../../App';
+const Navbar = ({ onLanguageChange }) => { 
+    const language = useContext(LanguageContext);
     return (
         <>
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -48,7 +51,6 @@ const Navbar = ({ language, onLanguageChange }) => {
   )
 }
 Navbar.propTypes = {
-    language: PropTypes.string.isRequired,
     onLanguageChange: PropTypes.func.isRequired
 };
 
