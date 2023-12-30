@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { useContext } from 'react';
-import { LanguageContext } from '../../App';
+import { LanguageContext } from '../../App.jsx';
 const Page404 = () => {
     const language = useContext(LanguageContext);
     const image = "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/MayKishon/c9a31fc5-9a6a-4a66-a874-ebb37a4159f0_404.png";

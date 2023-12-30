@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
-import { LanguageContext } from '../../App';
+import { LanguageContext } from '../../App.jsx';
 const Navbar = ({ onLanguageChange }) => { 
     const language = useContext(LanguageContext);
     return (

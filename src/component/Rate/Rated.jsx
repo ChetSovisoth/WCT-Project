@@ -2,11 +2,10 @@ import { FaStar } from "react-icons/fa"
 import PropTypes from "prop-types"
 
 const Rated = ({ rating }) => {
-  const rated = rating;
   return (
     <>   
       {Array.from({ length: 5 }, (_, index) => (
-        <FaStar key={index} color={index + 1 <= rated ? "#FFC107" : "#E4E5E9"} />
+        <FaStar key={index} color={index + 1 <= rating ? "#FFC107" : "#E4E5E9"} />
       ))}
     </>
   )

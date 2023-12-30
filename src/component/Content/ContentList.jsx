@@ -1,7 +1,7 @@
-import Content from "./Content"
-import api from "../../assets/api"
+import Content from "./Content.jsx"
+import api from "../../assets/api.json"
 import { useContext } from 'react';
-import { LanguageContext } from '../../App';
+import { LanguageContext } from '../../App.jsx';
 
 const ContentList = () => {
   const language = useContext(LanguageContext);

@@ -17,7 +17,6 @@ const SearchBar = ({ setResults }) => {
             user.name.toLowerCase().includes(value)
             );
           });
-        console.log(results)
         setResults(results);
       });
   };

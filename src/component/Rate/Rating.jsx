@@ -1,12 +1,14 @@
 import { useState, useContext } from "react";
 import { FaStar } from "react-icons/fa"
 import PropTypes from 'prop-types';
-import { LanguageContext } from '../../App';
+import { LanguageContext } from '../../App.jsx';
+
 const Rating = ({ contentId, onRatingChange }) => {
     const language = useContext(LanguageContext);
     const [rating, setRating] = useState(null);
     const [hover, setHover] = useState(null);
     const [rated, setRated] = useState(false);
+
     const handleRatingClick = (selectedRating) => {
         setRated(true)
         setRating(selectedRating);

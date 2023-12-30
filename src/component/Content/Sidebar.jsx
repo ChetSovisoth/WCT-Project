@@ -1,6 +1,6 @@
-import api from "../../assets/api"
+import api from "../../assets/api.json"
 import { useContext } from 'react';
-import { LanguageContext } from '../../App';
+import { LanguageContext } from '../../App.jsx';
 const Sidebar = () => {
   const language = useContext(LanguageContext);
   return (

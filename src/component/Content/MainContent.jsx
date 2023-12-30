@@ -1,5 +1,5 @@
-import ContentList from "./ContentList"
-import DisplaySidebar from "./DisplaySidebar"
+import ContentList from "./ContentList.jsx"
+import DisplaySidebar from "./DisplaySidebar.jsx"
 
 const MainContent = () => {
   return (

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { LanguageContext } from '../../App';
+import { LanguageContext } from '../../App.jsx';
 const Contact = () => {
     const language = useContext(LanguageContext);
   return (

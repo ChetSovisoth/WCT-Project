@@ -16,7 +16,7 @@ const SearchResult = ({ result }) => {
 };
 
 SearchResult.propTypes = {
-    result: PropTypes.string
+  result: PropTypes.string
 } 
 
 export default SearchResult

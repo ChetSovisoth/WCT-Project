@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import Rating from '../Rate/Rating';
-import Rated from '../Rate/Rated';
-import api from "../../assets/api"
+import Rating from '../Rate/Rating.jsx';
+import Rated from '../Rate/Rated.jsx';
+import api from "../../assets/api.json"
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleBookmark, setRating } from '../../redux/slice';
+import { toggleBookmark, setRating } from '../../redux/slice.js';
 
 const Content = (props) => {
   const {attractionPlace, imgSrc, tag, description, map, id } = props;

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import SearchResult from "./SearchResult";
+import SearchResult from "./SearchResult.jsx";
 
 const SearchResultsList = ({ results }) => {
   return (
@@ -12,7 +12,7 @@ const SearchResultsList = ({ results }) => {
 };
 
 SearchResultsList.propTypes = {
-    results: PropTypes.array.isRequired
+  results: PropTypes.array.isRequired
 }  
 
 export default SearchResultsList
