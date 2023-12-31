@@ -3,7 +3,7 @@ import Rating from '../Rate/Rating.jsx';
 import Rated from '../Rate/Rated.jsx';
 import api from "../../assets/api.json"
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleBookmark, setRating } from '../../redux/slice.js';
+import { toggleBookmark, setRating } from '../../Redux/slice.js';
 
 const Content = (props) => {
   const {attractionPlace, imgSrc, tag, description, map, id } = props;
