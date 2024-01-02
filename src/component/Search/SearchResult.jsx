@@ -1,22 +1,12 @@
-import PropTypes from 'prop-types';
-
-const SearchResult = ({ result }) => {
-    return (
-      <>
-        <div className='bg-white p-2 fs-5' style={{width: "500px"}}>
-          <div
-            role='button'
-            onClick={() => alert(`You selected ${result}!`)}
-            >
-            {result}
-          </div>
-        </div>
-      </>
-    );
+import "../../assets/style.css/home.css";
+export const SearchResult = ({ result }) => {
+  return (
+    <div
+      className="search-result"
+      onClick={(e) => alert(`You selected ${result}!`)}
+    >
+      {result}
+    </div>
+    
+  );
 };
-
-SearchResult.propTypes = {
-  result: PropTypes.string
-} 
-
-export default SearchResult

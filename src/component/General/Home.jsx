@@ -117,6 +117,7 @@ const Home = () => {
                   <a href="./register.html" className="button">
                     Takoe
                   </a>
+                  
                 </div>
                 <div className="d-flex mt-3">
                   <div className="search">

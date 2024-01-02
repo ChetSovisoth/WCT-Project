@@ -1,18 +1,12 @@
-import PropTypes from 'prop-types';
-import SearchResult from "./SearchResult.jsx";
-
-const SearchResultsList = ({ results }) => {
+import { SearchResult } from "./SearchResult";
+import "../../assets/style.css/home.css";
+export const SearchResultsList = ({ results }) => {
   return (
-    <div className='d-flex align-items-center flex-column results-list '>
+    <div className="results-list">
       {results.map((result, id) => {
         return <SearchResult result={result.name} key={id} />;
       })}
     </div>
   );
+  
 };
-
-SearchResultsList.propTypes = {
-  results: PropTypes.array.isRequired
-}  
-
-export default SearchResultsList
