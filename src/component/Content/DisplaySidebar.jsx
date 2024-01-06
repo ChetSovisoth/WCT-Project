@@ -1,6 +1,6 @@
 import Sidebar from './Sidebar.jsx'
-
-const DisplaySidebar = () => {
+import PropTypes from 'prop-types'
+const DisplaySidebar = ({ provinceData }) => {
   return (
     <>
       {/*  Offcanvas shows when screensize below sm  */}
@@ -11,17 +11,18 @@ const DisplaySidebar = () => {
             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
           </div>
           <div className="offcanvas-body">
-            <Sidebar />
+            <Sidebar provinceData={provinceData} />
           </div>
         </div>
       </div>
       {/* Shows above md */}
       <div className='d-none d-sm-inline'>
-        <Sidebar />
+        <Sidebar provinceData={provinceData} />
       </div>
-
     </>
   )
 }
-
+DisplaySidebar.propTypes = {
+  provinceData: PropTypes.array.isRequired
+}
 export default DisplaySidebar

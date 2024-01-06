@@ -1,10 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {};
-
 const slice = createSlice({
   name: 'bookmarks',
-  initialState,
+  initialState: {},
   reducers: {
     setRating: (state, action) => {
       const { id, ratingValue } = action.payload;
@@ -34,10 +32,23 @@ const slice = createSlice({
         // Remove bookmarked data
         localStorage.removeItem(`bookmarked_${id}`);
       }
+    },
+    getProvince: (state, action) => {
+      const province = action.payload;
+      state.province = province;
+    },
+    setSearch: (state, action) => {
+      const search = action.payload;
+      localStorage.setItem("search", search);
+      state.search = search;
+    },
+    setProvinceData: (state, action) => {
+      const provinceData = action.payload;
+      state.provinceData = provinceData;
     }
   },
 });
 
 
-export const { toggleBookmark, setRating } = slice.actions;
+export const { toggleBookmark, setRating, getProvince, setSearch, setProvinceData } = slice.actions;
 export default slice.reducer;

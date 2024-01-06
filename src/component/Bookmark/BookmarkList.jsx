@@ -22,11 +22,11 @@ const BookmarkList = () => {
   return (
     <>
       <h2 className="ms-5 my-3">Bookmarks</h2>
-      <p className={`lead ms-5 ${bookmarkedItems == 0 ? "" : "d-none"}`}>Bookmarks will be displayed here.</p>
+      <p className={`lead ms-5 ${bookmarkedItems.length == 0 ? "" : "d-none"}`}>{language === 'English' ? 'Bookmarks will be displayed here.' : 'កំណត់ចំណាំនឹងត្រូវបានបង្ហាញនៅទីនេះ។'}</p>
       <div className='row'>
         {bookmarkedItems.map((items) => (
           <Content {...items[language]} key={items[language].id}/>
-          ))}
+        ))}
       </div>
     </>
   )

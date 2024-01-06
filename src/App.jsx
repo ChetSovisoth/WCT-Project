@@ -19,6 +19,12 @@ function App() {
   const handleLanguageChange = () => {
     setLanguage((prevLanguage) => (prevLanguage === 'English' ? 'Khmer' : 'English'));
   };
+  const provinceList = [
+    'PhnomPenh', 'SiemReap', 'Kandal', 'Takeo', 'PreyVeng', 
+    'SvayRieng', 'Kompot', 'Kep', 'Preah Sihanouk', 'Koh kong', 'Kompong Speu', 
+    'Pursat', 'Battambang', 'Pailin', 'Kampong Chhnang', 'Kampong Cham', 'Tbong Khmum', 
+    'Kraite', 'Kampong Thom', 'Mondulkiri', 'Ratanakiri', 'Preah Vihear', 'Steung Treng', 'Oddar Meanchey', 'Banteay Meanchey'
+  ];
   return (
     <>
       <LanguageContext.Provider value={language} >
@@ -30,7 +36,9 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="/bookmark" element={<Bookmark />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/signin" element={<MainContent />} />
+            {provinceList.map((province) => 
+              <Route path={province.toLowerCase()} key={province} element={<MainContent />}/>
+            )}
             <Route path="*" element={<Page404 />}/>
           </Routes>
         <Footer />

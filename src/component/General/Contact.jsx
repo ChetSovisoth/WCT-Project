@@ -1,7 +1,18 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { LanguageContext } from '../../App.jsx';
 const Contact = () => {
     const language = useContext(LanguageContext);
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [location, setLocation] = useState("");
+    const [mapLink, setMapLink] = useState("");
+
+    const handleSubmit = () => {
+      setName("");
+      setPhone("");
+      setLocation("");
+      setMapLink("");
+    }
   return (
     <>
       <div className="d-flex my-5 row">
@@ -9,11 +20,13 @@ const Contact = () => {
           <h2>{language === 'English' ? "Know a Better Place?": "ស្គាល់កន្លែងល្អជាងនេះ?"}</h2>
           <p className="lead">{language === 'English' ? "Let us Know": "អនុញ្ញាតឱ្យយើងដឹង"}</p>
           <div className="d-flex flex-column align-items-center">
-            <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" type="text" id="name" placeholder="Your Name" style={{padding: "8px"}}/>
-            <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" type="tel" inputMode="numeric" id="number" placeholder="Phone Number" style={{padding: "8px"}}/>
-            <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" type="text" id="location" placeholder="Location Name" style={{padding: "8px"}}/>
-            <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" type="text" id="locationMap" placeholder="Google Map Location" style={{padding: "8px"}}/>
-            <button className="btn btn-outline-primary ms-5 mt-1 w-25" >Submit</button>
+            <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" required value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Your Name" style={{padding: "8px"}}/>
+            <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" required value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" id="number" placeholder="Phone Number" style={{padding: "8px"}}/>
+            <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" required value={location} onChange={(e) => setLocation(e.target.value)} type="text" placeholder="Location Name" style={{padding: "8px"}}/>
+            <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" required value={mapLink} onChange={(e) => setMapLink(e.target.value)} type="text" placeholder="Google Map Location" style={{padding: "8px"}}/>
+            <button type="button" className="btn btn-outline-primary ms-5 mt-1 w-25" onClick={handleSubmit} data-bs-toggle="modal" data-bs-target="#submitFormModal">
+              Submit
+            </button>
           </div>
         </div>
         <div className="flex-grow-1 d-flex align-items-center flex-column col-md-4 mt-5 mt-md-0">
@@ -36,6 +49,27 @@ const Contact = () => {
               <a href="https://www.instagram.com/komsanhub/" target="_blank" rel="noopener noreferrer"><i className="bi bi-instagram mx-3 fs-2" style={{color: "#bc2a8d"}}></i></a>         
               <a href="https://github.com/ChetSovisoth" target="_blank" rel="noopener noreferrer"><i className="bi bi-github mx-3 fs-2 text-black"></i></a>
             </div>
+        </div>
+      </div>
+      {/* Modal Body */}
+      <div className="modal fade" id="submitFormModal" tabindex="-1" aria-labelledby="submitFormModal" aria-hidden="true">
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="submitFormModal">
+                {language === 'English' ? "Form Submitted": "បញ្ចូនបានសម្រេច"}
+              </h1>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div className="modal-body">
+              {language === 'English' ? "We appreciate your contribution.": "អរគុណសម្រាប់ការចូលរួមរបស់លោកអ្នក"}
+            </div>
+            <div className="modal-footer">
+              <button type="button" data-bs-dismiss="modal" className="btn btn-primary">
+                {language === 'English' ? "Close": "បិទ"}
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </>

@@ -1,12 +1,15 @@
 import './bgImg.css'
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SearchBar = ({ setResults }) => {
   const [input, setInput] = useState("");
+  const navigate = useNavigate();
+
 
   const fetchData = (value) => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("https://mock-json-v6.onrender.com/provincesdata")
       .then((response) => response.json())
       .then((json) => {
         const results = json.filter((user) => {
@@ -25,6 +28,10 @@ const SearchBar = ({ setResults }) => {
     setInput(value);
     fetchData(value);
   };
+  
+  const handleSearchClick = () => {
+    navigate(input.toLowerCase());
+  };
   return (
     <>
       <div className="container-fluid bg-light p-0 d-none d-lg-inline">
@@ -38,7 +45,7 @@ const SearchBar = ({ setResults }) => {
               value={input}
               onChange={(e) => handleChange(e.target.value)}
             />
-            <button className='btn btn-primary btn-lg d-flex align-items-center' style={{height: "42px"}}>Search</button>
+            <button className='btn btn-primary btn-lg d-flex align-items-center' style={{height: "42px"}} onClick={handleSearchClick}>Search</button>
           </div>
         </div>
       </div>
@@ -53,7 +60,7 @@ const SearchBar = ({ setResults }) => {
               value={input}
               onChange={(e) => handleChange(e.target.value)}
             />
-            <button className='btn btn-primary btn-lg d-flex align-items-center' style={{height: "42px"}}>Search</button>
+            <button className='btn btn-primary btn-lg d-flex align-items-center' style={{height: "42px"}} onClick={handleSearchClick}>Search</button>
           </div>
         </div>
       </div>

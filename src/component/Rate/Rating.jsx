@@ -20,10 +20,10 @@ const Rating = ({ contentId, onRatingChange }) => {
         <>
         <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content">
-            <div className="modal-header">
-                <h1 className="modal-title fs-5" id="staticBackdropLabel">{language === 'English' ? "How was you experience here?": "តើបទពិសោធន៍អ្នកនៅទីនេះយ៉ាងដូចម្តេច?"}</h1>
-                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
+                <div className="modal-header">
+                    <h1 className="modal-title fs-5" id="staticBackdropLabel">{language === 'English' ? "How was you experience here?": "តើបទពិសោធន៍អ្នកនៅទីនេះយ៉ាងដូចម្តេច?"}</h1>
+                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
             <div className="modal-body">
                 <p style={{width: "90%"}} className="mx-auto">{language === 'English' ? "Please feel free to share with us your experience about this place.": "សូមចូលរួមចែករំលែកបទពិសោធន៍របស់អ្នកអំពីកន្លែងនេះជាមួយពួកយើង។"}</p>
                 <div className='text-center' style={{fontSize: "1.5rem"}}>
@@ -50,12 +50,14 @@ const Rating = ({ contentId, onRatingChange }) => {
                     })}
                 </div>
             </div>
-            <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={() => handleRatingClick(rating)}>
-                    {`${rated ? "Rer" : "R"}ate`}
-                </button>
-            </div>
+                <div className="modal-footer">
+                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
+                        {language === 'English' ? "Close": "បិទ"}
+                    </button>
+                    <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={() => handleRatingClick(rating)}>
+                        {`${rated ? "Rer" : "R"}ate`}
+                    </button>
+                </div>
             </div>
         </div>
     </>
