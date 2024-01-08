@@ -42,8 +42,6 @@ function App() {
               <Route path={province.toLowerCase()} key={province} element={<MainContent />}/>
             )}
             <Route path="*" element={<Page404 />}/>
-            <Route path="/signin" element={<SignIn />}/>
-            <Route path="/signup" element={<SignUp />}/>
           </Routes>
         <Footer />
       </LanguageContext.Provider>
