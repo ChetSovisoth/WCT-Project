@@ -2,9 +2,8 @@ import { useContext } from 'react';
 import { LanguageContext } from '../../App.jsx';
 import PropTypes from 'prop-types';
 const Sidebar = ({ provinceData }) => {
-  const language = useContext(LanguageContext) === 'English' ? 'en' : 'km';
-  const dataItem = provinceData && provinceData[0];
-  if (!dataItem || !dataItem.en) {
+  const language = useContext(LanguageContext);
+  if (!provinceData || !provinceData[0] || !provinceData[0][language] || !provinceData[0][language].attraction) {
     return <div>Data not available.</div>;
   }
   return (
@@ -20,10 +19,10 @@ const Sidebar = ({ provinceData }) => {
           className="shadow bg-body-tertiary rounded mx-auto"
           ></iframe>
 
-        <p className="p-3 fs-3 mb-2 ms-2 lead fw-bold">{provinceData[0][language].city}</p>
+        <p className="p-3 fs-3 mb-2 ms-2 lead fw-bold">{provinceData[0][language].province}</p>
         <div className="card mb-3 bg-light border-0" style={{width: "18rem"}}>
           <div className="card-body">
-            <h5 className="card-title text-center">{provinceData[0][language].intro}</h5>
+            <h5 className="card-title text-center">{provinceData[0][language].city}</h5>
             <div className="rounded bg-white shadow bg-body-tertiary my-4">
               <p className="card-text p-3">{provinceData[0][language].description}</p>
             </div>

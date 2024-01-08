@@ -1,19 +1,18 @@
 import PropTypes from 'prop-types';
 import Rating from '../Rate/Rating.jsx';
 import Rated from '../Rate/Rated.jsx';
-import api from "../../assets/api.json"
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleBookmark, setRating } from '../../Redux/slice.js';
 
 const Content = (props) => {
-  const {attractionPlace, imgSrc, tag, description, map, id } = props;
+  const {attractionPlace, imgSrc, tag, description, map, id, provinceData } = props;
   const dispatch = useDispatch();
   const isBookmarked = useSelector((state) => state.bookmarks[id]?.isBookmarked || false);
   const rating = useSelector((state) => state.bookmarks[id]?.rating || 0);
-
+  
   const handleBookmarkClick = () => {
-    const English = api.English.phnomPenh[id - 1];
-    const Khmer = api.Khmer.phnomPenh[id - 1];
+    const English = (provinceData[0].English.attraction[id - (provinceData[0].English.attraction[0].id)]);
+    const Khmer = (provinceData[0].Khmer.attraction[id - (provinceData[0].Khmer.attraction[0].id)]);
     dispatch(toggleBookmark({English, Khmer, id}));
   };
 
@@ -64,6 +63,7 @@ Content.propTypes = {
   description: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   map: PropTypes.string.isRequired,
+  provinceData: PropTypes.array.isRequired
 };
 
 export default Content

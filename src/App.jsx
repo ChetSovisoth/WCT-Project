@@ -10,6 +10,8 @@ import SearchResultsList from "./component/Search/SearchResultList.jsx";
 import MainContent from './component/Content/MainContent.jsx';
 import Bookmark from './component/Bookmark/BookmarkList.jsx';
 import Page404 from './component/General/Page404.jsx';
+import SignIn from './component/Auth/SignIn.jsx';
+import SignUp from './component/Auth/SignUp.jsx';
 
 export const LanguageContext = createContext("English");
 
@@ -20,10 +22,10 @@ function App() {
     setLanguage((prevLanguage) => (prevLanguage === 'English' ? 'Khmer' : 'English'));
   };
   const provinceList = [
-    'PhnomPenh', 'SiemReap', 'Kandal', 'Takeo', 'PreyVeng', 
-    'SvayRieng', 'Kompot', 'Kep', 'Preah Sihanouk', 'Koh kong', 'Kompong Speu', 
+    'Phnom Penh', 'Siem Reap', 'Kandal', 'Takeo', 'Prey Veng', 
+    'Svay Rieng', 'Kompot', 'Kep', 'Sihanoukville', 'Koh Kong', 'Kompong Speu', 
     'Pursat', 'Battambang', 'Pailin', 'Kampong Chhnang', 'Kampong Cham', 'Tbong Khmum', 
-    'Kraite', 'Kampong Thom', 'Mondulkiri', 'Ratanakiri', 'Preah Vihear', 'Steung Treng', 'Oddar Meanchey', 'Banteay Meanchey'
+    'Kratie', 'Kampong Thom', 'Mondulkiri', 'Ratanakiri', 'Preah Vihear', 'Steung Treng', 'Oddar Meanchey', 'Banteay Meanchey'
   ];
   return (
     <>
@@ -40,6 +42,8 @@ function App() {
               <Route path={province.toLowerCase()} key={province} element={<MainContent />}/>
             )}
             <Route path="*" element={<Page404 />}/>
+            <Route path="/signin" element={<SignIn />}/>
+            <Route path="/signup" element={<SignUp />}/>
           </Routes>
         <Footer />
       </LanguageContext.Provider>

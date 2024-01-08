@@ -6,11 +6,11 @@ const MainContent = () => {
   const province = useSelector((state) => state.bookmarks.province);
   const [provinceData, setProvinceData] = useState([]);
   useEffect(() => {
-    fetch("https://mock-json-v6.onrender.com/provincesdata")
+    fetch("https://newest-3wwi.onrender.com/provincesData")
     .then((response) => response.json())
     .then((json) => {
       const filteredProvinces = json.filter((data) => {
-        return data.name.toLowerCase() === province.toLowerCase();
+        return data.nameEn.toLowerCase() === province.toLowerCase();
       });
       setProvinceData(filteredProvinces);
     });

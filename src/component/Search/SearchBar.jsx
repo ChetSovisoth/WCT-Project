@@ -9,21 +9,22 @@ const SearchBar = ({ setResults }) => {
 
 
   const fetchData = (value) => {
-    fetch("https://mock-json-v6.onrender.com/provincesdata")
-      .then((response) => response.json())
-      .then((json) => {
-        const results = json.filter((user) => {
-          return (
+    fetch("https://newest-3wwi.onrender.com/provincesData")
+    .then((response) => response.json())
+    .then((json) => {
+      const results = json.filter((data) => {
+        return (
             value &&
-            user &&
-            user.name &&
-            user.name.toLowerCase().includes(value)
-            );
-          });
-        setResults(results);
+            data.nameEn &&
+            data.nameEn.trim().toLowerCase().includes(value)
+          );
       });
-  };
-
+      setResults(results);
+    })
+    .catch((error) => {
+      console.error("Error fetching data with nameEn:", error);
+    });
+  }
   const handleChange = (value) => {
     setInput(value);
     fetchData(value);

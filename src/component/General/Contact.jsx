@@ -21,7 +21,7 @@ const Contact = () => {
           <p className="lead">{language === 'English' ? "Let us Know": "អនុញ្ញាតឱ្យយើងដឹង"}</p>
           <div className="d-flex flex-column align-items-center">
             <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" required value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Your Name" style={{padding: "8px"}}/>
-            <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" required value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" id="number" placeholder="Phone Number" style={{padding: "8px"}}/>
+            <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" required value={phone} onChange={(e) => setPhone(e.target.value)} type="numeric" id="number" placeholder="Phone Number" style={{padding: "8px"}}/>
             <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" required value={location} onChange={(e) => setLocation(e.target.value)} type="text" placeholder="Location Name" style={{padding: "8px"}}/>
             <input className="my-1 ms-5 w-75 w-md-50 rounded-3 border border-secondary" required value={mapLink} onChange={(e) => setMapLink(e.target.value)} type="text" placeholder="Google Map Location" style={{padding: "8px"}}/>
             <button type="button" className="btn btn-outline-primary ms-5 mt-1 w-25" onClick={handleSubmit} data-bs-toggle="modal" data-bs-target="#submitFormModal">
@@ -52,7 +52,7 @@ const Contact = () => {
         </div>
       </div>
       {/* Modal Body */}
-      <div className="modal fade" id="submitFormModal" tabindex="-1" aria-labelledby="submitFormModal" aria-hidden="true">
+      <div className="modal fade" id="submitFormModal" tabIndex="-1" aria-labelledby="submitFormModal" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
             <div className="modal-header">

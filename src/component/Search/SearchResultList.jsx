@@ -5,7 +5,7 @@ const SearchResultsList = ({ results }) => {
   return (
     <div className='d-flex align-items-center flex-column results-list '>
       {results.map((result, id) => {
-        return <SearchResult result={result.name} key={id} />;
+        return <SearchResult result={result.nameEn} key={id} />;
       })}
     </div>
   );
