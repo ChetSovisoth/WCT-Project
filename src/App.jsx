@@ -10,8 +10,6 @@ import SearchResultsList from "./component/Search/SearchResultList.jsx";
 import MainContent from './component/Content/MainContent.jsx';
 import Bookmark from './component/Bookmark/BookmarkList.jsx';
 import Page404 from './component/General/Page404.jsx';
-import SignIn from './component/Auth/SignIn.jsx';
-import SignUp from './component/Auth/SignUp.jsx';
 
 export const LanguageContext = createContext("English");
 
