@@ -17,15 +17,15 @@ const Home = () => {
   return (
     <div className="d-flex flex-column align-content-center">
       <div  className="d-flex flex-column align-content-center">
-        <h2 className="text-center">Our Popular</h2>
+        <h1 className="text-center my-3 fw-bold">Our Popular</h1>
         <PopularList provinceData={provinceData} />
       </div>
       <div className="d-flex flex-column align-content-center">
-        <h2 className="text-center">Our Highlight</h2>
+        <h1 className="text-center my-3 fw-bold">Our Highlight</h1>
         <HightlightList provinceData={provinceData} />
       </div>
       <div className="d-flex flex-column align-content-center">
-        <h2 className="text-center">Our Latest</h2>
+        <h1 className="text-center my-3 fw-bold">Our Latest</h1>
         <LatestList provinceData={provinceData}/>
       </div>
     </div>

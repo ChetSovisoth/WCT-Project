@@ -1,11 +1,19 @@
-import { useContext } from "react";
-import PropTypes from 'prop-types'
-import { LanguageContext } from "../../App";
 import Content from "./Content";
+import PropTypes from 'prop-types';
+import { useContext } from "react";
+import { LanguageContext } from "../../App";
+import { useMediaQuery } from "react-responsive";
 const HightlightList = ({ provinceData }) => {
   const language = useContext(LanguageContext);
+  const isSmallScreen =  useMediaQuery({ query: '(min-width: 0) and (max-width: 814px)' });
+  const isMediumScreen = useMediaQuery({ query: '(min-width: 1200px) and (max-width: 1699px)' });
   if (!provinceData || !provinceData[0] || !provinceData[0][language] || !provinceData[0][language].attraction) {
-    return <div>Data not available.</div>;
+    return (
+      <div className="d-flex justify-content-center ">
+        <p className="mx-3">Loading</p>
+        <div className="spinner-border" role="status"></div>
+      </div>
+    );
   }
   const hightlightData = [
     provinceData[0][language].attraction[0],
@@ -14,17 +22,21 @@ const HightlightList = ({ provinceData }) => {
     provinceData[20][language].attraction[2]
   ];
   return (
-    <>
-      <div className="row d-none d-md-inline-flex d-xl-none d-xxxl-inline-flex d-xxxl-inline-flex">
-        {Array.from({ length: hightlightData.length }, (_, index) => (
-          <Content {...hightlightData[index]} key={hightlightData[index].id} />
-        ))}
-      </div>
-      <div className="row d-md-none d-xl-inline-flex d-xxxl-none">
-        {Array.from({ length: hightlightData.length - 1 }, (_, index) => (
-          <Content {...hightlightData[index]} key={hightlightData[index].id} />
-        ))}
-      </div>
+    <> 
+      {
+        (isSmallScreen || isMediumScreen) ? 
+          <div className="row d-md-none d-xl-inline-flex d-xxxl-none">
+            {Array.from({ length: hightlightData.length - 1 }, (_, index) => (
+              <Content {...hightlightData[index]} key={hightlightData[index].id} provinceData={provinceData} />
+            ))}
+          </div>
+        :
+          <div className="row d-none d-md-inline-flex d-xl-none d-xxxl-inline-flex d-xxxl-inline-flex">
+            {Array.from({ length: hightlightData.length }, (_, index) => (
+              <Content {...hightlightData[index]} key={hightlightData[index].id} provinceData={provinceData} />
+            ))}
+          </div>
+      }
     </>
   )
 }

@@ -9,10 +9,20 @@ const Content = (props) => {
   const dispatch = useDispatch();
   const isBookmarked = useSelector((state) => state.bookmarks[id]?.isBookmarked || false);
   const rating = useSelector((state) => state.bookmarks[id]?.rating || 0);
-  
+  let provinceIdStartFrom;
+  const getProvinceIdStartFrom = id => {
+    provinceData.forEach(province => {
+      province.English.attraction.forEach(attraction => {
+        if(id === attraction.id) {
+          provinceIdStartFrom = province.English.attraction[0].id;
+        }
+      });
+    });
+    return provinceIdStartFrom
+  }
   const handleBookmarkClick = () => {
-    const English = (provinceData[0].English.attraction[id - (provinceData[0].English.attraction[0].id)]);
-    const Khmer = (provinceData[0].Khmer.attraction[id - (provinceData[0].Khmer.attraction[0].id)]);
+    const English = (provinceData[0].English.attraction[id - getProvinceIdStartFrom(id)]);
+    const Khmer = (provinceData[0].Khmer.attraction[id - getProvinceIdStartFrom(id)]);
     dispatch(toggleBookmark({English, Khmer, id}));
   };
 
@@ -63,7 +73,7 @@ Content.propTypes = {
   description: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   map: PropTypes.string.isRequired,
-  provinceData: PropTypes.array.isRequired
+  provinceData: PropTypes.array
 };
 
 export default Content

@@ -1,23 +1,16 @@
-//import Popular from "./Popular";
-import {  useEffect } from 'react'
+import { useMediaQuery } from "react-responsive";
 const PopularList = () => {
-    //const [ratedItem, setRatedItem] = useState([]);
-    useEffect(() =>  {
-      const items = [];
-      for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        if (key.startsWith("rating_")) {
-          const item = JSON.parse(localStorage.getItem(key));
-          items.push(item);
-        }
-      }
-      //setRatedItem(items);
-    }, []);
-    //console.log(ratedItem)
+    const isSmallScreen =  useMediaQuery({ query: '(min-width: 0) and (max-width: 814px)' });
+    const isMediumScreen = useMediaQuery({ query: '(min-width: 1200px) and (max-width: 1699px)' });
   return (
-    <div>
-        
-    </div>
+    <>
+      {
+        (isSmallScreen || isMediumScreen) ?
+          ""
+        :
+          ""
+      }
+    </>
   )
 }
 

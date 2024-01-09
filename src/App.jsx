@@ -21,7 +21,7 @@ function App() {
   };
   const provinceList = [
     'Phnom Penh', 'Siem Reap', 'Kandal', 'Takeo', 'Prey Veng', 
-    'Svay Rieng', 'Kompot', 'Kep', 'Sihanoukville', 'Koh Kong', 'Kompong Speu', 
+    'Svay Rieng', 'Kompot', 'Kep', 'Sihanoukville', 'Koh Kong', 'Kampong Speu', 
     'Pursat', 'Battambang', 'Pailin', 'Kampong Chhnang', 'Kampong Cham', 'Tbong Khmum', 
     'Kratie', 'Kampong Thom', 'Mondulkiri', 'Ratanakiri', 'Preah Vihear', 'Steung Treng', 'Oddar Meanchey', 'Banteay Meanchey'
   ];

@@ -12,7 +12,6 @@ const BookmarkList = () => {
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key && key.startsWith("bookmarked_")) {
-          // Parse the JSON value and add it to the array
           const item = JSON.parse(localStorage.getItem(key));
           items.push(item);
         }
@@ -25,7 +24,7 @@ const BookmarkList = () => {
       <p className={`lead ms-5 ${bookmarkedItems.length == 0 ? "" : "d-none"}`}>{language === 'English' ? 'Bookmarks will be displayed here.' : 'កំណត់ចំណាំនឹងត្រូវបានបង្ហាញនៅទីនេះ។'}</p>
       <div className='row'>
         {bookmarkedItems.map((items) => (
-          <Content {...items[language]} key={items[language].id}/>
+          <Content {...items[language]} key={items.id}/>
         ))}
       </div>
     </>

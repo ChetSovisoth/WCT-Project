@@ -4,7 +4,12 @@ import PropTypes from 'prop-types';
 const Sidebar = ({ provinceData }) => {
   const language = useContext(LanguageContext);
   if (!provinceData || !provinceData[0] || !provinceData[0][language] || !provinceData[0][language].attraction) {
-    return <div>Data not available.</div>;
+    return (
+      <div className="d-flex justify-content-center ">
+        <p className="mx-3">Loading</p>
+        <div className="spinner-border" role="status"></div>
+      </div>
+    );
   }
   return (
     <div className="ms-3 mt-2 sticky-top">
