@@ -35,12 +35,12 @@ const Content = (props) => {
   };
   return (
     <>
-      <div className='col-12 col-md-6 col-xl-4 col-xxxl-3 d-flex justify-content-center g-2 mb-5'>
+      <div className='col-12 col-md-6 col-xl-4 col-xxxl-3 d-flex justify-content-center g-2 mb-5' style={{maxWidth: "98%"}}>
         <div className="card pb-0 mx-auto position-relative" style={{ minWidth: "230px", maxWidth: "350px" }}>
           <img src={imgSrc} className="card-img-top" alt={attractionPlace} style={{ width: "100%", height: "190px" }} />
           <button
             className={`btn position-absolute top-0 end-0 bg-white rounded-5 ${isBookmarked ? 'text-danger' : ''}`}
-            style={{ fontSize: "1.5rem" }}
+            style={{ fontSize: "1.2rem" }}
             onClick={handleBookmarkClick}
           >
           <i className={`bi bi-heart${isBookmarked ? '-fill' : ''}`}></i>

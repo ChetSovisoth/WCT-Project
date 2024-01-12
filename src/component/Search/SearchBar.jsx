@@ -1,4 +1,4 @@
-import './bgImg.css'
+import '../../assets/styles/bgImg.css'
 import PropTypes from 'prop-types';
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -18,7 +18,11 @@ const SearchBar = ({ setResults }) => {
         return (
             value &&
             data.nameEn &&
-            data.nameEn.trim().toLowerCase().includes(value)
+            data.nameEn.trim().toLowerCase().includes(value) &&
+            data.nameEn !== 'Beach' &&
+            data.nameEn !== 'Historical' &&
+            data.nameEn !== 'Nature' &&
+            data.nameEn !== 'All'
           );
       });
       setResults(results);
@@ -57,13 +61,13 @@ const SearchBar = ({ setResults }) => {
           <div className='bg-white p-3 rounded d-flex align-items-center' style={{marginTop: "150px"}}>
             <i className="bi bi-search fs-5"></i>
             <input
-              style={{maxWidth: "600px", height: "40px"}}
+              style={{width: "200px", height: "40px"}}
               className='rounded p-2 border-1 mx-4'
               placeholder="Type to search..."
               value={input}
               onChange={(e) => handleChange(e.target.value)}
             />
-            <button className='btn btn-primary btn-lg d-flex align-items-center' style={{height: "42px"}} onClick={handleSearchClick}>{language === 'English' ? 'Search' : 'ស្វែងរក'}</button>
+            <button className='btn btn-primary d-flex align-items-center' style={{height: "42px"}} onClick={handleSearchClick}>{language === 'English' ? 'Search' : 'ស្វែងរក'}</button>
           </div>
         </div>
       </div>

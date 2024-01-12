@@ -42,7 +42,7 @@ const Content = (props) => {
     };    
   return (
     <>
-        <div className='col-12 col-md-6 col-xl-4 col-xxxl-3 d-flex justify-content-center g-3'>
+        <div className='col-12 col-md-6 col-xl-4 col-xxxl-3 d-flex justify-content-center g-3' style={{maxWidth: "98%"}}>
             <div className="card pb-0 mx-auto position-relative" style={{ maxWidth: "350px", width: "100%" }}>
                 <img src={imgSrc} className="card-img-top object-fit-cover " alt={`Picture of ${attractionPlace}`} style={{ width: "100%", height: "190px" }} />
                 <button
