@@ -3,8 +3,11 @@ import Rating from '../Rate/Rating.jsx';
 import Rated from '../Rate/Rated.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleBookmark, setRating } from '../../Redux/slice.js';
+import { useContext } from 'react';
+import { LanguageContext } from '../../App.jsx';
 
 const Content = (props) => {
+  const language = useContext(LanguageContext);
   const {attractionPlace, imgSrc, tag, description, map, id, provinceData } = props;
   const dispatch = useDispatch();
   const isBookmarked = useSelector((state) => state.bookmarks[id]?.isBookmarked || false);
@@ -20,6 +23,7 @@ const Content = (props) => {
     });
     return provinceIdStartFrom
   }
+
   const handleBookmarkClick = () => {
     const English = (provinceData[0].English.attraction[id - getProvinceIdStartFrom(id)]);
     const Khmer = (provinceData[0].Khmer.attraction[id - getProvinceIdStartFrom(id)]);
@@ -50,8 +54,8 @@ const Content = (props) => {
                 <Rated rating={rating} contentId={id}/>
               </div>
               <div className="btn-group rounded mt-1">
-                <a href={map} className="btn btn-outline-primary rounded-start" target="_blank" rel="noopener noreferrer">Map</a>
-                <a className="btn btn-outline-primary rounded-end" data-bs-toggle="modal" data-bs-target={`#rate-modal-${id}`}>Rate</a>
+                <a href={map} className="btn btn-outline-primary rounded-start" target="_blank" rel="noopener noreferrer">{language === 'English' ? 'Map' : "ផែនទី"}</a>
+                <a className="btn btn-outline-primary rounded-end" data-bs-toggle="modal" data-bs-target={`#rate-modal-${id}`}>{language === 'English' ? 'Rate' : "វាយតម្លៃ"}</a>
               </div>
             </div>
           </div>

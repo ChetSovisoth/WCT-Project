@@ -1,10 +1,10 @@
-import Content from "./Content";
-import PropTypes from 'prop-types';
 import { useContext } from "react";
-import { LanguageContext } from "../../App";
+import { LanguageContext, ProvinceData } from "../../App";
 import { useMediaQuery } from "react-responsive";
-const LatestList = ({ provinceData }) => {
+import Content from "./Content";
+const LatestList = () => {
   const language = useContext(LanguageContext);
+  const provinceData = useContext(ProvinceData);
   const isSmallScreen =  useMediaQuery({ query: '(min-width: 0) and (max-width: 814px)' });
   const isMediumScreen = useMediaQuery({ query: '(min-width: 1200px) and (max-width: 1699px)' });
   if (!provinceData || !provinceData[0] || !provinceData[0][language] || !provinceData[0][language].attraction) {
@@ -42,8 +42,5 @@ const LatestList = ({ provinceData }) => {
       }
     </>
   )
-}
-LatestList.propTypes = {
-  provinceData: PropTypes.array.isRequired
 }
 export default LatestList

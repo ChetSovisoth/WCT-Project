@@ -55,7 +55,7 @@ const Rating = ({ contentId, onRatingChange }) => {
                         {language === 'English' ? "Close": "បិទ"}
                     </button>
                     <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={() => handleRatingClick(rating)}>
-                        {`${rated ? "Rer" : "R"}ate`}
+                        {language === 'English' ? `${rated ? "Rer" : "R"}ate` : `${rated ? "វាយតម្លៃម្តងទៀត" : "វាយតម្លៃ"}`}
                     </button>
                 </div>
             </div>

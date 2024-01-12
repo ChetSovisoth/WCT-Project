@@ -1,11 +1,11 @@
 .bg-img-lg {
-    background-image: url('../../assets/pic/Angkor.jpg'); 
+    background-image: url('../../assets/images/Angkor.jpg'); 
     background-size: cover;
     background-position: center;
     height: 80vh;
 }
 .bg-img {
-    background-image: url('../../assets/pic/Search Page.jpg');
+    background-image: url('../../assets/images/Search Page.jpg');
     background-size: cover;
     background-position: center;
     height: 60vh;
@@ -18,5 +18,7 @@
     background-color: rgba(255, 255, 255, 0.9); /* Adjust background color and opacity */
     border-radius: 5px;
     z-index: 1; /* Ensure the results appear above the image */
+    max-height: 250px;
+    overflow-y: scroll;
 }
 

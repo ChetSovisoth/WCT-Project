@@ -4,18 +4,18 @@ import { LanguageContext } from '../../App.jsx';
 const Footer = () => {
     const language = useContext(LanguageContext);
   return (
-    <div id="footer" className="bg-footer mb-0">
+    <div id="footer" className="bg-footer mb-0 mt-4">
         <div className="row text-white mx-2">
             <div className="col-md-4">
                 <h3 className="py-3 fw-bold">KomsanHub</h3>
                 <p style={{maxWidth: "500px"}}>{language === 'English' ? "Royal University of Phnom Penh (Campus 1), Russian Federation Blvd (110), Touk Kork, Phnom Penh, Cambodia": "សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ (សាខាទី១), មហាវិថីសហព័ន្ធរុស្ស៊ី (១១០), ទួលគោក, រាជធានីភ្នំពេញ, កម្ពុជា"}</p>
             </div>
             <div className="col-md-4">
-                <h3 className="py-3 fw-bold">{language === 'English' ? "Explore": "ស្វែងរក"}</h3>
-                <Link to='/' className="nav-link">Home</Link>
-                <Link to='/contact' className="nav-link">Contact Us</Link>
-                <Link to='/about' className="nav-link">About Us</Link>
-                <Link to='/bookmark' className="nav-link">Bookmarks</Link>
+                <h3 className="py-3">{language === 'English' ? "Explore": "ស្វែងរក"}</h3>
+                <Link to='/' className="nav-link">{language === 'English' ? 'Home' : 'ទំព័រដើម'}</Link>
+                <Link to='/about' className="nav-link">{language === 'English' ? 'About Us' : 'អំពី​ពួក​យើង​'}</Link>
+                <Link to='/contact' className="nav-link">{language === 'English' ? 'Contact Us' : 'ទាក់ទងយើង​'}</Link>
+                <Link to='/bookmark' className="nav-link">{language === 'English' ? 'Bookmarks' : 'កំណត់ចំណាំ'}</Link>
             </div>
             <div className="col-md-4">
                 <h3 className="py-3">{language === 'English' ? "Follow Us": "តាម​ដានយើង"}</h3>

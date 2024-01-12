@@ -1,15 +1,17 @@
 import './bgImg.css'
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { LanguageContext } from '../../App';
 
 const SearchBar = ({ setResults }) => {
   const [input, setInput] = useState("");
   const navigate = useNavigate();
+  const language = useContext(LanguageContext);
 
 
   const fetchData = (value) => {
-    fetch("https://newest-3wwi.onrender.com/provincesData")
+    fetch("https://province-api-sxzb.onrender.com/provincesData")
     .then((response) => response.json())
     .then((json) => {
       const results = json.filter((data) => {
@@ -46,7 +48,7 @@ const SearchBar = ({ setResults }) => {
               value={input}
               onChange={(e) => handleChange(e.target.value)}
             />
-            <button className='btn btn-primary btn-lg d-flex align-items-center' style={{height: "42px"}} onClick={handleSearchClick}>Search</button>
+            <button className='btn btn-primary btn-lg d-flex align-items-center' style={{height: "42px"}} onClick={handleSearchClick}>{language === 'English' ? 'Search' : 'ស្វែងរក'}</button>
           </div>
         </div>
       </div>
@@ -61,7 +63,7 @@ const SearchBar = ({ setResults }) => {
               value={input}
               onChange={(e) => handleChange(e.target.value)}
             />
-            <button className='btn btn-primary btn-lg d-flex align-items-center' style={{height: "42px"}} onClick={handleSearchClick}>Search</button>
+            <button className='btn btn-primary btn-lg d-flex align-items-center' style={{height: "42px"}} onClick={handleSearchClick}>{language === 'English' ? 'Search' : 'ស្វែងរក'}</button>
           </div>
         </div>
       </div>

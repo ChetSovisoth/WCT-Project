@@ -35,8 +35,8 @@ const Sidebar = ({ provinceData }) => {
           </div>
         </div>
         <div className="container p-3 d-flex justify-content-center align-items-center flex-column">
-          <a className="btn btn-outline-black border-3 border-black mb-2" href={provinceData[0].restaurant} style={{width: "288px"}} target="_blank" rel="noopener noreferrer">Restaurants</a>
-          <a className="btn btn-outline-black border-3 border-black mb-2" href={provinceData[0].accomadation} style={{width: "288px"}} target="_blank" rel="noopener noreferrer">Accomadations</a>
+          <a className="btn btn-outline-black border-3 border-black mb-2" href={provinceData[0].restaurant} style={{width: "288px"}} target="_blank" rel="noopener noreferrer">{language === 'English' ? 'Restaurants' : "ភោជនីយដ្ឋាន"}</a>
+          <a className="btn btn-outline-black border-3 border-black mb-2" href={provinceData[0].accomadation} style={{width: "288px"}} target="_blank" rel="noopener noreferrer">{language === 'English' ? 'Accomadations' : "កន្លែងស្នាក់នៅ"}</a>
         </div>
       </div>
     </div>
