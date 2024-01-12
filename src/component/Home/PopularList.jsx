@@ -65,13 +65,13 @@ const PopularList = () => {
               ))}
           </div>
         :
-        <div className="row d-none d-md-inline-flex d-xl-none d-xxxl-inline-flex d-xxxl-inline-flex">
-          <h1  className="text-center my-3 fw-bold">{language === 'English' ? 'Popular' : "កន្លែងពេញនិយម"}</h1>
-          <p className={`lead ms-5 ${popularData.length == 0 ? "" : "d-none"}`}>{language === 'English' ? 'Popular places will be displayed here.' : 'កន្លែងពេញនិយមនឹងត្រូវបានបង្ហាញនៅទីនេះ។'}</p>
-          {Array.from({ length: popularData.length }, (_, index) => (
-            <Content {...popularData[index]} key={popularData[index].id} provinceData={provinceData} />
-          ))}
-        </div>
+          <div className="row d-none d-md-inline-flex d-xl-none d-xxxl-inline-flex d-xxxl-inline-flex">
+            <h1  className="text-center my-3 fw-bold">{language === 'English' ? 'Popular' : "កន្លែងពេញនិយម"}</h1>
+            <p className={`lead ms-5 ${popularData.length == 0 ? "" : "d-none"}`}>{language === 'English' ? 'Popular places will be displayed here.' : 'កន្លែងពេញនិយមនឹងត្រូវបានបង្ហាញនៅទីនេះ។'}</p>
+            {Array.from({ length: popularData.length }, (_, index) => (
+              <Content {...popularData[index]} key={popularData[index].id} provinceData={provinceData} />
+            ))}
+          </div>
       }
     </>
   )

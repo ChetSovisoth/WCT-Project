@@ -6,7 +6,6 @@ const DisplaySidebar = ({ provinceData }) => {
   const language = useContext(LanguageContext);
   return (
     <>
-      {/*  Offcanvas shows when screensize below sm  */}
       <div className='d-flex justify-content-center d-sm-none'>
         <button className="btn btn-lg btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">{language === 'English' ? 'Display City Informations' : "បង្ហាញព័ត៌មានទីក្រុង"}</button>
         <div className="offcanvas-lg offcanvas-end" tabIndex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
@@ -18,7 +17,6 @@ const DisplaySidebar = ({ provinceData }) => {
           </div>
         </div>
       </div>
-      {/* Shows above md */}
       <div className='d-none d-sm-inline'>
         <Sidebar provinceData={provinceData} />
       </div>

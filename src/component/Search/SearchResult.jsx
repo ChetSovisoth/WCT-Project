@@ -12,10 +12,10 @@ const SearchResult = ({ result }) => {
     return (
       <>
         <div className='bg-white p-2 fs-5 d-none d-lg-inline' style={{width: "500px"}}>
-          <Link to={result} className='nav-link' onClick={handleSearchClick}>{result}</Link>
+          <Link to={`/${result}`} className='nav-link' onClick={handleSearchClick}>{result}</Link>
         </div>
         <div className='d-lg-none bg-white p-2 fs-5' style={{width: "250px"}}>
-          <Link to={result} className='nav-link' onClick={handleSearchClick}>{result}</Link>
+          <Link to={`/${result}`} className='nav-link' onClick={handleSearchClick}>{result}</Link>
         </div>
       </>
     );

@@ -14,7 +14,6 @@ export const LanguageContext = createContext("English");
 export const ProvinceData = createContext({});
 function App() {
   const [provinceData, setProvinceData] = useState();
-  const [results, setResults] = useState([]);
   const [language, setLanguage] = useState('English');
   const handleLanguageChange = () => {
     setLanguage((prevLanguage) => (prevLanguage === 'English' ? 'Khmer' : 'English'));

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import React, {useState} from "react";
+import { useState } from "react";
 import HightlightList from "./HightlightList";
 import LatestList from "./LatestList";
 import PopularList from "./PopularList";
