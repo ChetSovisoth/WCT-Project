@@ -76,7 +76,7 @@ Content.propTypes = {
   tag: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
-  map: PropTypes.string.isRequired,
+  map: PropTypes.string,
   provinceData: PropTypes.array
 };
 

@@ -6,6 +6,8 @@ import PopularList from "./PopularList";
 import SearchBar from "../Search/SearchBar.jsx"
 import SearchResultsList from "../Search/SearchResultList.jsx"
 import { LanguageContext } from "../../App";
+import "../../assets/styles/home.css";
+
 const Home = () => {
   const [results, setResults] = useState([]);
   const language = useContext(LanguageContext);

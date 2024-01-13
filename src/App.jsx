@@ -9,6 +9,9 @@ import Contact from './component/General/Contact.jsx';
 import MainContent from './component/Content/MainContent.jsx';
 import Bookmark from './component/Bookmark/BookmarkList.jsx';
 import Page404 from './component/General/Page404.jsx';
+import QuickTripPlanner from './component/QuickTrip/QuickTripPlanner.jsx';
+import SignIn from './component/Auth/SignIn.jsx';
+import SignUp from './component/Auth/SignUp.jsx';
 
 export const LanguageContext = createContext("English");
 export const ProvinceData = createContext({});
@@ -41,6 +44,9 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="/bookmark" element={<Bookmark />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/quicktrip" element={<QuickTripPlanner />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
             {provinceList.map((province) => 
               <Route path={province.toLowerCase()} key={province} element={<MainContent />}/>
             )}

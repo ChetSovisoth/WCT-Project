@@ -1,0 +1,218 @@
+.bg-img-lg {
+    background-image: url("../images/Angkor.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+  }
+  .bg-img {
+    background-image: url("../images/Search Page.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+  }
+  .results-list {
+    position: absolute;
+    top: calc(100% - 400px); /* Adjust the distance from the search bar */
+    left: 45.5%; /* Center the results horizontally */
+    transform: translateX(-50%);
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.9
+    ); /* Adjust background color and opacity */
+    border-radius: 5px;
+    z-index: 1; /* Ensure the results appear above the image */
+  }
+  
+  .input-wrapper {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 10px;
+    padding: 0 15px;
+    box-shadow: 0px 0px 8px #ddd;
+    background-color: white;
+    display: flex;
+    align-items: center;
+  }
+  .results-list {
+    width: 50%;
+    background-color: rgb(28, 24, 24);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px #0a0707;
+    border-radius: 10px;
+    margin-top: 2rem;
+    max-height: 200px;
+    text-align: start;
+    font-size: medium;
+    overflow-y: auto;
+  }
+  .title {
+    text-decoration: none;
+    font-size: 4vh;
+    color: rgb(255, 255, 255);
+    padding: 25px 17px;
+    text-align: center;
+    vertical-align: center;
+  }
+  .title h1 {
+    font-size: 10vh;
+    text-shadow: 2px black;
+    transition: ease 0.3s;
+  }
+  
+  .title h1:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+  }
+  .btn-pink-moon {
+    margin-left: 0px;
+    background: #ec008c; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #fc6767,
+      #ec008c
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #fc6767,
+      #ec008c
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 3px solid #eee;
+  }
+  .btns {
+    width: 50%;
+    text-align: center;
+    height: 50px;
+    border-radius: 25%;
+    margin-left: 63px;
+  }
+  .btn-cool-blues {
+    background: #2193b0; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #6dd5ed,
+      #2193b0
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #6dd5ed,
+      #2193b0
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 3px solid #eee;
+  }
+  .btn-purple-moon {
+    background: #4e54c8; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #8f94fb,
+      #4e54c8
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #8f94fb,
+      #4e54c8
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 3px solid #eee;
+  }
+  
+  .btn-ultra-voilet {
+    margin-left: 0%;
+    background: #654ea3; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #eaafc8,
+      #654ea3
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #eaafc8,
+      #654ea3
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 3px solid #eee;
+  }
+  
+  /* CSS */
+  
+  .button-17 {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+      rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: 0.25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 10px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform, opacity;
+  z-index: 0;
+}
+
+.button-17:hover {
+  background: #f6f9fe;
+  color: #174ea6;
+}
+
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+    0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button-17:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 4px 4px 0,
+    rgba(60, 64, 67, 0.15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}

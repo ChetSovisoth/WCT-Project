@@ -25,7 +25,7 @@ const Sidebar = ({ provinceData }) => {
           ></iframe>
 
         <p className="p-3 fs-3 mb-2 ms-2 lead fw-bold">{provinceData[0][language].province}</p>
-        <div className="card mb-3 bg-light border-0" style={{width: "18rem"}}>
+        <div className="card mb-3 bg-light border-0" style={{width: "16rem"}}>
           <div className="card-body">
             <h5 className="card-title text-center">{provinceData[0][language].city}</h5>
             <div className="rounded bg-white shadow bg-body-tertiary my-4">
