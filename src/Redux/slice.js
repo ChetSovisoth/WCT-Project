@@ -45,6 +45,10 @@ const slice = createSlice({
     setProvinceData: (state, action) => {
       const provinceData = action.payload;
       state.provinceData = provinceData;
+    },
+    isLogin: (state, action) => {
+      const login = action.payload;
+      state.login = login;
     }
   },
 });

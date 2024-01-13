@@ -5,8 +5,13 @@ const SignIn = () => {
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
     const handleSignIn = () => {
-        console.log(email);
-        console.log(password);
+        const getData = JSON.parse(localStorage.getItem(email));
+        if((email === getData.email) && (password === getData.password)){
+            
+        }
+        else {
+            console.log(getData.username)
+        }
     }
   return (
     <div className="d-flex flex-column align-items-center justify-content-center mt-5">   
