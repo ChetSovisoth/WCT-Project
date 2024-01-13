@@ -15,25 +15,30 @@ const HightlightList = () => {
       </div>
     );
   }
-  const hightlightData = [
+  const hightlightDataBig = [
     provinceData[0][language].attraction[0],
     provinceData[1][language].attraction[0],
     provinceData[8][language].attraction[2],
     provinceData[20][language].attraction[2]
+  ];
+  const hightlightDataSmall = [
+    provinceData[0][language].attraction[0],
+    provinceData[1][language].attraction[0],
+    provinceData[8][language].attraction[2],
   ];
   return (
     <> 
       {
         (isSmallScreen || isMediumScreen) ? 
           <div className="row d-md-none d-xl-inline-flex d-xxxl-none">
-            {Array.from({ length: hightlightData.length - 1 }, (_, index) => (
-              <Content {...hightlightData[index]} key={hightlightData[index].id} provinceData={provinceData} />
+            {Array.from({ length: hightlightDataSmall.length }, (_, index) => (
+              <Content {...hightlightDataSmall[index]} key={hightlightDataSmall[index].id} provinceData={provinceData} />
             ))}
           </div>
         :
           <div className="row d-none d-md-inline-flex d-xl-none d-xxxl-inline-flex d-xxxl-inline-flex">
-            {Array.from({ length: hightlightData.length }, (_, index) => (
-              <Content {...hightlightData[index]} key={hightlightData[index].id} provinceData={provinceData} />
+            {Array.from({ length: hightlightDataBig.length }, (_, index) => (
+              <Content {...hightlightDataBig[index]} key={hightlightDataBig[index].id} provinceData={provinceData} />
             ))}
           </div>
       }

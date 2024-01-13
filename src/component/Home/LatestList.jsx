@@ -24,13 +24,14 @@ const LatestList = () => {
   });
   allAttractions = allAttractions.reverse();
   const lastestFour = allAttractions.slice(0, 4);
+  const lastestThree = allAttractions.slice(0, 3);
   return (
     <>
       {
         (isSmallScreen || isMediumScreen) ? 
           <div className="row d-lg-none d-xl-inline-flex d-xxxl-none">
-            {Array.from({ length: lastestFour.length - 1 }, (_, index) => (
-              <Content {...lastestFour[index]} key={lastestFour[index].id} provinceData={provinceData} />
+            {Array.from({ length: lastestThree.length }, (_, index) => (
+              <Content {...lastestThree[index]} key={lastestThree[index].id} provinceData={provinceData} />
             ))}
           </div>
         :
