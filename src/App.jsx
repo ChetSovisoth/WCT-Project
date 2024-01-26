@@ -5,7 +5,6 @@ import About from './component/General/About.jsx';
 import Home from './component/Home/Home.jsx';
 import Navbar from './component/General/Navbar.jsx';
 import Contact from './component/General/Contact.jsx';
-
 import MainContent from './component/Content/MainContent.jsx';
 import Bookmark from './component/Bookmark/BookmarkList.jsx';
 import Page404 from './component/General/Page404.jsx';

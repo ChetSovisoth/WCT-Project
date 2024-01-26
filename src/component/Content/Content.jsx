@@ -43,7 +43,7 @@ const Content = (props) => {
             style={{ fontSize: "1.2rem" }}
             onClick={handleBookmarkClick}
           >
-          <i className={`bi bi-heart${isBookmarked ? '-fill' : ''}`}></i>
+          <i className={`bi bi-bookmark${isBookmarked ? '-fill' : ''}`}></i>
           </button>
           <div className="card-body">
             <h5 className="card-title">{attractionPlace}</h5>

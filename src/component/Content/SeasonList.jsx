@@ -35,7 +35,7 @@ const SeasonList = ({ provinceData = [] }) => {
   const seasonData = filterData(selectedCategory);
   return (
     <>
-      <div className="row " accordion>
+      <div className="row ">
         <div className="col" href="">
           <button
             className="col btns btn-purple-moon "
