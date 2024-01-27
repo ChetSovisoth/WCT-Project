@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { LanguageContext } from "../../App.jsx";
-import { db } from "../firebase/Firebase.js";
+// import { db } from "../firebase/Firebase.js";
 import { useSelector } from "react-redux";
-import { auth } from "../firebase/Firebase.js";
+// import { auth } from "../firebase/Firebase.js";
 const Contact = () => {
   const language = useContext(LanguageContext);
   const [name, setName] = useState("");
@@ -10,7 +10,7 @@ const Contact = () => {
   const [location, setLocation] = useState("");
   const [mapLink, setMapLink] = useState("");
   const user = useSelector((state) => state.auth.user);
-  const currentUserUid = auth.currentUser.uid;
+  // const currentUserUid = auth.currentUser.uid;
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!user) {
@@ -18,20 +18,20 @@ const Contact = () => {
       return;
     }
     // Now, you can use `currentUserUid` in your database operation or logging.
-    db.collection("contact us")
-      .add({
-        uid: currentUserUid,
-        name: name,
-        phone: phone,
-        location: location,
-        mapLink: mapLink,
-      })
-      .then(() => {
-        alert("Message has been submitted");
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
+    // db.collection("contact us")
+    //   .add({
+    //     uid: currentUserUid,
+    //     name: name,
+    //     phone: phone,
+    //     location: location,
+    //     mapLink: mapLink,
+    //   })
+    //   .then(() => {
+    //     alert("Message has been submitted");
+    //   })
+    //   .catch((error) => {
+    //     alert(error.message);
+    //   });
   };
   return (
     <>
